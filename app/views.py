@@ -5,6 +5,8 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from .models import Empleado
+from django.contrib.auth.decorators import login_required
+
 
 def home(request):
     return render(request, 'home.html') 
@@ -53,6 +55,7 @@ def signout(request):
     logout(request)
     return redirect('home')
 
+@login_required  
 def personal(request):
-    empleados = Empleado.objects.all()  
-    return render(request, 'personal.html', {'empleados': empleados})  
+    empleados = Empleado.objects.filter(usuario=request.user)
+    return render(request, 'personal.html', {'empleados': empleados})
