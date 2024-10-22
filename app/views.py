@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from .models import Empleado
 from django.contrib.auth.decorators import login_required
-
+from .forms import EmpleadoForm
 
 def home(request):
     return render(request, 'home.html') 
@@ -58,4 +58,17 @@ def signout(request):
 @login_required  
 def personal(request):
     empleados = Empleado.objects.filter(usuario=request.user)
-    return render(request, 'personal.html', {'empleados': empleados})
+    return render(request, 'personal/personal.html', {'empleados': empleados})
+
+@login_required
+def crear_empleado(request):
+    if request.method == 'POST':
+        form = EmpleadoForm(request.POST)
+        if form.is_valid():
+            empleado = form.save(commit=False)
+            empleado.usuario = request.user  
+            empleado.save()
+            return redirect('personal')
+    else:
+        form = EmpleadoForm()
+    return render(request, 'personal/crear_empleado.html', {'form': form})
