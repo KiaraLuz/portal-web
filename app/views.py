@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
+from .models import Empleado
 
 def home(request):
     return render(request, 'home.html') 
@@ -53,4 +54,5 @@ def signout(request):
     return redirect('home')
 
 def personal(request):
-    return render(request, 'personal.html')
+    empleados = Empleado.objects.all()  
+    return render(request, 'personal.html', {'empleados': empleados})  
