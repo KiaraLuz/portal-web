@@ -1,9 +1,38 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+    <style>
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            gap: 10px;
+        }
+        .logo h2 {
+            font-size: 15px;
+            font-weight: 200;
+            text-align: left !important;
+            color: #694772;
+        }
+    </style>
     <div class="autenticacion">
         <div class="signin-container">
             <div class="signin-form">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="{% static 'img/logo.jpg' %}" alt="Logo" style="max-width: 50px;">
+                        <h2>Portal Web</h2>
+                    </div>
+                </div>
                 <h1>Registrarse</h1>
                 <form method="POST" class="formulario" action="/signup/">
                     {% csrf_token %}
