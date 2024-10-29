@@ -1,13 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
 class Empleado(models.Model):
     ROLES = (
         ('Gerente', 'Gerente'),
         ('Desarrollador', 'Desarrollador'),
         ('Recursos Humanos', 'Recursos Humanos'),
-        ('Ventas', 'Ventas'),
+        ('Vendedor', 'Vendedor'),
     )
     
     nombre = models.CharField(max_length=50)
@@ -18,7 +17,6 @@ class Empleado(models.Model):
     fecha_contratacion = models.DateField()
     telefono = models.CharField(max_length=15)
     
-    # Agregando una clave foránea al modelo User
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

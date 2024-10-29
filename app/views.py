@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -72,3 +72,15 @@ def crear_empleado(request):
     else:
         form = EmpleadoForm()
     return render(request, 'personal/crear_empleado.html', {'form': form})
+
+@login_required
+def modificar_empleado(request, empleado_id):
+    empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user)
+    if request.method == 'POST':
+        form = EmpleadoForm(request.POST, instance=empleado)
+        if form.is_valid():
+            form.save()
+            return redirect('personal')
+    else:
+        form = EmpleadoForm(instance=empleado)
+    return render(request, 'personal/modificar_empleado.html', {'form': form, 'empleado': empleado})
