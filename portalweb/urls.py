@@ -26,4 +26,5 @@ urlpatterns = [
     path("signout/", views.signout, name="signout"),
     path("personal/", views.personal, name="personal"),
     path('crear-empleado/', views.crear_empleado, name='crear_empleado'),
+    path('modificar_empleado/<int:empleado_id>/', views.modificar_empleado, name='modificar_empleado'),
 ]
