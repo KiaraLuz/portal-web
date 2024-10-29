@@ -4,12 +4,12 @@
 <div class="container mt-5 d-flex justify-content-center">
     <div class="card shadow-lg" style="width: 40rem;">
         <div class="card-header text-center">
-            <h3 class="mb-0">Agregar Nuevo Empleado</h3>
+            <h3 class="mb-0">Modificar Empleado</h3>
         </div>
         <div class="card-body p-4">
             <form method="POST">
                 {% csrf_token %}
-
+                
                 {% for field in form %}
                 <div class="mb-3">
                     <label for="{{ field.id_for_label }}" 
@@ -41,7 +41,7 @@
                 {% endfor %}
 
                 <div class="d-flex justify-content-between mt-4">
-                    <button type="submit" class="btn btn-success px-4">Guardar</button>
+                    <button type="submit" class="btn btn-warning px-4">Actualizar</button>
                     <a href="{% url 'personal' %}" class="btn btn-secondary px-4">Cancelar</a>
                 </div>
             </form>
