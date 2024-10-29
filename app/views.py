@@ -84,3 +84,10 @@ def modificar_empleado(request, empleado_id):
     else:
         form = EmpleadoForm(instance=empleado)
     return render(request, 'personal/modificar_empleado.html', {'form': form, 'empleado': empleado})
+
+@login_required
+def eliminar_empleado(request, empleado_id):
+    empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user) # Obtener empleado
+    empleado.delete() # Eliminar empleado
+    messages.success(request, "Empleado eliminado exitosamente.") # Mensaje de éxito
+    return redirect('personal') # Redirigir a la lista de empleados
