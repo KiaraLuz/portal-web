@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from .models import Empleado
 from django.contrib.auth.decorators import login_required
-
+from .forms import EmpleadoForm
 
 def home(request):
     return render(request, 'home.html') 
@@ -58,4 +58,36 @@ def signout(request):
 @login_required  
 def personal(request):
     empleados = Empleado.objects.filter(usuario=request.user)
-    return render(request, 'personal.html', {'empleados': empleados})
+    return render(request, 'personal/personal.html', {'empleados': empleados})
+
+@login_required
+def crear_empleado(request):
+    if request.method == 'POST':
+        form = EmpleadoForm(request.POST)
+        if form.is_valid():
+            empleado = form.save(commit=False)
+            empleado.usuario = request.user  
+            empleado.save()
+            return redirect('personal')
+    else:
+        form = EmpleadoForm()
+    return render(request, 'personal/crear_empleado.html', {'form': form})
+
+@login_required
+def modificar_empleado(request, empleado_id):
+    empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user)
+    if request.method == 'POST':
+        form = EmpleadoForm(request.POST, instance=empleado)
+        if form.is_valid():
+            form.save()
+            return redirect('personal')
+    else:
+        form = EmpleadoForm(instance=empleado)
+    return render(request, 'personal/modificar_empleado.html', {'form': form, 'empleado': empleado})
+
+@login_required
+def eliminar_empleado(request, empleado_id):
+    empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user) # Obtener empleado
+    empleado.delete() # Eliminar empleado
+    messages.success(request, "Empleado eliminado exitosamente.") # Mensaje de éxito
+    return redirect('personal') # Redirigir a la lista de empleados
