@@ -91,3 +91,7 @@ def eliminar_empleado(request, empleado_id):
     empleado.delete() # Eliminar empleado
     messages.success(request, "Empleado eliminado exitosamente.") # Mensaje de éxito
     return redirect('personal') # Redirigir a la lista de empleados
+@login_required
+def detalle_empleado(request, empleado_id):
+    empleado = get_object_or_404(Empleado, id=empleado_id)
+    return render(request, 'personal/detalle_empleado.html', {'empleado': empleado})
