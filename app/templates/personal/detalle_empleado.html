@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <div class="card mb-3" style="max-width: 600px; margin: auto;">
+        <div style="background-color: #694772;" class="card-header  text-white">
+            <h5>Detalles del Empleado</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>Nombre:</strong> {{ empleado.nombre }}</p>
+            <p><strong>Apellido:</strong> {{ empleado.apellido }}</p>
+            <p><strong>Email:</strong> {{ empleado.email }}</p>
+            <p><strong>Rol:</strong> {{ empleado.rol }}</p>
+            <p><strong>Departamento:</strong> {{ empleado.departamento }}</p>
+            <p><strong>Teléfono:</strong> {{ empleado.telefono }}</p>
+            <p><strong>Fecha de Contratación:</strong> {{ empleado.fecha_contratacion }}</p>
+        </div>
+    </div>
+
+    <a href="{% url 'personal' %}" class="btn btn-secondary mt-3">Volver</a>
+    
+</div>
+
+
+{% endblock %}
