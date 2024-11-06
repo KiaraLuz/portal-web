@@ -29,4 +29,5 @@ urlpatterns = [
     path('modificar_empleado/<int:empleado_id>/', views.modificar_empleado, name='modificar_empleado'),
     path('eliminar-empleado/<int:empleado_id>/', views.eliminar_empleado, name='eliminar_empleado'),
     path('detalle_empleado/<int:empleado_id>/', views.detalle_empleado, name='detalle_empleado'),
+    path('producto/', views.producto, name='producto'),
 ]

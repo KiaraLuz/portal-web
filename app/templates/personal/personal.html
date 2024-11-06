@@ -29,7 +29,6 @@
                     <a href="{% url 'detalle_empleado' empleado.id %}" class="btn btn-info btn-sm">Ver Detalle</a>
                     <a href="{% url 'modificar_empleado' empleado.id %}" class="btn btn-warning btn-sm">Editar</a>
                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" onclick="setEmpleadoId('{{ empleado.id }}')">Eliminar</button>
-
                 </td>
             </tr>
             {% empty %}
