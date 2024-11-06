@@ -21,3 +21,13 @@ class Empleado(models.Model):
 
     def __str__(self):
         return f'{self.nombre} {self.apellido} ({self.rol})'
+
+class Producto(models.Model):
+    nombre = models.CharField(max_length=100)
+    categoria = models.CharField(max_length=100)
+    stock = models.PositiveIntegerField()
+    cantidad_vendida = models.PositiveIntegerField(default=0)
+    precio = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f'{self.nombre} ({self.categoria})'
