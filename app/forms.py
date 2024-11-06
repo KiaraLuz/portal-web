@@ -1,5 +1,5 @@
 from django import forms
-from .models import Empleado
+from .models import Empleado,Producto
 
 class EmpleadoForm(forms.ModelForm):
     class Meta:
@@ -8,3 +8,7 @@ class EmpleadoForm(forms.ModelForm):
         widgets = {
             'fecha_contratacion': forms.DateInput(attrs={'type': 'date'}),
         }
+class ProductoForm(forms.ModelForm):
+    class Meta:
+        model = Producto
+        fields = ['nombre', 'categoria', 'stock', 'cantidad_vendida', 'precio']

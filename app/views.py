@@ -4,9 +4,10 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from .models import Empleado
+from .models import Empleado, Producto
 from django.contrib.auth.decorators import login_required
 from .forms import EmpleadoForm
+from .forms import ProductoForm
 
 def home(request):
     return render(request, 'home.html') 
@@ -87,11 +88,29 @@ def modificar_empleado(request, empleado_id):
 
 @login_required
 def eliminar_empleado(request, empleado_id):
-    empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user) # Obtener empleado
-    empleado.delete() # Eliminar empleado
-    messages.success(request, "Empleado eliminado exitosamente.") # Mensaje de éxito
-    return redirect('personal') # Redirigir a la lista de empleados
+    empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user) 
+    empleado.delete() 
+    messages.success(request, "Empleado eliminado exitosamente.") 
+    return redirect('personal') 
 @login_required
 def detalle_empleado(request, empleado_id):
     empleado = get_object_or_404(Empleado, id=empleado_id)
     return render(request, 'personal/detalle_empleado.html', {'empleado': empleado})
+
+@login_required
+def producto(request):
+    productos = Producto.objects.filter(usuario=request.user)
+    return render(request, 'producto/producto.html', {'productos': productos})
+
+@login_required
+def crear_producto(request):
+    if request.method == 'POST':
+        form = ProductoForm(request.POST)
+        if form.is_valid():
+            producto = form.save(commit=False)
+            producto.usuario = request.user
+            producto.save()
+            return redirect('producto') 
+    else:
+        form = ProductoForm()
+    return render(request, 'producto/crear_producto.html', {'form': form})
