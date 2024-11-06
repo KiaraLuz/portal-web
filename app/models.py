@@ -29,5 +29,7 @@ class Producto(models.Model):
     cantidad_vendida = models.PositiveIntegerField(default=0)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
 
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+
     def __str__(self):
         return f'{self.nombre} ({self.categoria})'
