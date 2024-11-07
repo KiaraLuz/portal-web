@@ -8,6 +8,7 @@ class EmpleadoForm(forms.ModelForm):
         widgets = {
             'fecha_contratacion': forms.DateInput(attrs={'type': 'date'}),
         }
+
 class ProductoForm(forms.ModelForm):
     class Meta:
         model = Producto
