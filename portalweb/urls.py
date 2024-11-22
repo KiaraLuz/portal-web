@@ -21,15 +21,4 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home, name="home"),
-    path("signin/", views.signin, name="signin"),
-    path("signup/", views.signup, name="signup"),
-    path("signout/", views.signout, name="signout"),
-    path("personal/", views.personal, name="personal"),
-    path('crear-empleado/', views.crear_empleado, name='crear_empleado'),
-    path('modificar-empleado/<int:empleado_id>/', views.modificar_empleado, name='modificar_empleado'),
-    path('eliminar-empleado/<int:empleado_id>/', views.eliminar_empleado, name='eliminar_empleado'),
-    path('detalle_empleado/<int:empleado_id>/', views.detalle_empleado, name='detalle_empleado'),
-    path('producto/', views.producto, name='producto'),
-    path('crear-producto/', views.crear_producto, name='crear_producto'),
-    path('modificar-producto/<int:producto_id>/', views.modificar_producto, name='modificar_producto'),
 ]
