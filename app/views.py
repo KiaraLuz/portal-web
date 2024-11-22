@@ -6,8 +6,7 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from .models import Empleado, Producto
 from django.contrib.auth.decorators import login_required
-from .forms import EmpleadoForm
-from .forms import ProductoForm
+from .forms import EmpleadoForm, ProductoForm
 
 def home(request):
     return render(request, 'home.html') 
@@ -91,7 +90,8 @@ def eliminar_empleado(request, empleado_id):
     empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user) 
     empleado.delete() 
     messages.success(request, "Empleado eliminado exitosamente.") 
-    return redirect('personal') 
+    return redirect('personal')
+
 @login_required
 def detalle_empleado(request, empleado_id):
     empleado = get_object_or_404(Empleado, id=empleado_id)
@@ -114,3 +114,15 @@ def crear_producto(request):
     else:
         form = ProductoForm()
     return render(request, 'producto/crear_producto.html', {'form': form})
+
+@login_required
+def modificar_producto(request, producto_id):
+    producto = get_object_or_404(Producto, id=producto_id, usuario=request.user)
+    if request.method == 'POST':
+        form = ProductoForm(request.POST, instance=producto)
+        if form.is_valid():
+            form.save()
+            return redirect('producto')
+    else:
+        form = ProductoForm(instance=producto)
+    return render(request, 'producto/modificar_producto.html', {'form': form, 'producto': producto})
