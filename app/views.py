@@ -10,19 +10,10 @@ def mision_vision(request):
     return render(request, 'facultad/mision_vision.html')
 
 def transparencias(request):
-    documentos = [
-        {"titulo": "Estatuto de la Universidad", "enlace": "/ruta/estatuto.pdf"},
-        {"titulo": "Reglamento General", "enlace": "/ruta/reglamento.pdf"},
-        {"titulo": "Decretos Supremos", "enlace": "/ruta/decretos.pdf"},
-        {"titulo": "Plan Estratégico Institucional", "enlace": "/ruta/plan.pdf"},
-        {"titulo": "Información del Presupuesto Institucional", "enlace": "/ruta/presupuesto.pdf"},
-        {"titulo": "Información Académica", "enlace": "/ruta/academica.pdf"},
-        {"titulo": "Información Docente", "enlace": "/ruta/docente.pdf"},
-    ]
-    return render(request, 'facultad/transparencias.html', {'documentos': documentos})
+    return render(request, 'facultad/transparencias.html')
 
-def resoluciones_actas_reglamentos(request):
-    return render(request, 'facultad/resoluciones_actas_reglamentos.html')
+def reglamentos(request):
+    return render(request, 'facultad/reglamentos.html')
 
 def autoridades(request):
     return render(request, 'facultad/autoridades.html')
