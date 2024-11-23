@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Facultad</li>
+                    <li class="breadcrumb-item active" aria-current="page">Reseña Histórica</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Reseña Histórica</h1>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Texto principal -->
+        <div class="col-md-8">
+            <p>
+                La FIIS de la UNFV fue creada el 25 de marzo de 1964. Inicialmente funcionó como Escuela de Ingeniería
+                de Producción en la Facultad de Ciencias Económicas y Comerciales. En 1969, se reorganizó como el
+                Programa Académico de Formación Profesional de Ingeniería de Producción, gracias a la iniciativa de
+                docentes destacados como el Lic. Luis Salazar Larraín, Ing. Luis Sánchez Bazalar e Ing. Santiago Segura
+                Rodríguez.
+            </p>
+            <p>
+                En 1974, se formalizó el Departamento Académico de Ingeniería Industrial mediante la Resolución Rectoral
+                Nº 10243-74-CR. En 1976, una Comisión Reestructuradora y una Comisión Asesora en 1978, con miembros como
+                el Ing. Renato Gibellini y el Lic. Máximo Barrantes Zamora, impulsaron la transformación que llevó a la
+                creación de la Facultad en 1986.
+            </p>
+            <p>
+                La Escuela Profesional de Ingeniería de Sistemas fue creada en 1987 mediante la Resolución Rectoral Nº
+                009-87-FIIS-UNFV. Entre los miembros de su comisión fundadora se destacaron el Ing. Rodolfo Velarde
+                Palomino y el Ing. Ilmer Cóndor Espinoza.
+            </p>
+            <p>
+                En 1989, bajo la Resolución Rectoral Nº 5060-89-UNFV, se crearon dos nuevas escuelas profesionales:
+            </p>
+            <ul>
+                <li><strong>Ingeniería Agroindustrial (28.03.1989)</strong>: Para la preservación y transformación de
+                    productos agropecuarios.</li>
+                <li><strong>Ingeniería de Transportes (13.04.1989)</strong>: Para la gestión eficiente de empresas de
+                    transporte.</li>
+            </ul>
+            <p>
+                Estas iniciativas consolidaron a la FIIS como un referente en la formación de ingenieros altamente
+                capacitados.
+            </p>
+        </div>
+        <!-- Imagen -->
+        <div class="col-md-4 text-center">
+            <img src="{% static 'img/noticia.webp' %}" class="card-img-top mb-4" alt="...">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Sección principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Imagen */
+    .card-img-top {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+{% endblock %}

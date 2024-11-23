@@ -21,4 +21,9 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home, name="home"),
+    path('resena-historica/', views.resena_historica, name='resena_historica'),
+    path('mision-vision/', views.mision_vision, name='mision_vision'),
+    path('transparencias/', views.transparencias, name='transparencias'),
+    path('resoluciones-actas-reglamentos/', views.resoluciones_actas_reglamentos, name='resoluciones_actas_reglamentos'),
+    path('autoridades/', views.autoridades, name='autoridades'),
 ]

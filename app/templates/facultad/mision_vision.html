@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Facultad</li>
+                    <li class="breadcrumb-item active" aria-current="page">Misión y Visión</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <!-- Texto de Misión y Visión -->
+        <div class="col-md-8">
+            <h2 class="mb-4">Misión</h2>
+            <p class="lead">
+                "Brindar formación profesional científica y humanística a los estudiantes, con sensibilidad social,
+                innovación, competitividad y emprendimiento, para contribuir al desarrollo y la sostenibilidad sistémica
+                del país."
+            </p>
+
+            <h2 class="mt-5 mb-4">Visión</h2>
+            <p class="lead">
+                "Comunidad académica posicionada entre las mejores universidades en el ámbito nacional e internacional a
+                través de la calidad, producción y difusión intelectual e innovación con responsabilidad social."
+            </p>
+        </div>
+
+        <!-- Imagen -->
+        <div class="col-md-4 text-center">
+            <div class="image-placeholder bg-light border mb-3" style="height: 300px; width: 100%;"></div>
+            <p class="text-muted small">
+                Aprobado con Resolución R. N° 2535-2018-CU-UNFV
+            </p>
+            <a href="#" class="btn btn-orange">Descargar Resolución</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Sección principal */
+    h2 {
+        color: #902020;
+        font-weight: bold;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        text-align: justify;
+        color: #333;
+    }
+
+    /* Placeholder de imagen */
+    .image-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilo del botón */
+    .btn-orange {
+        background-color: #f79c42;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .btn-orange:hover {
+        background-color: #dc7c28;
+        color: #fff;
+    }
+</style>
+{% endblock %}
