@@ -26,3 +26,18 @@ def resoluciones_actas_reglamentos(request):
 
 def autoridades(request):
     return render(request, 'facultad/autoridades.html')
+
+def programacion(request):
+    return render(request, 'capacitacion/programacion.html')
+
+def gestion(request):
+    return render(request, 'capacitacion/gestion.html')
+
+def ciberseguridad(request):
+    return render(request, 'capacitacion/ciberseguridad.html')
+
+def bigdata(request):
+    return render(request, 'capacitacion/bigdata.html')
+
+def eventos(request):
+    return render(request, 'eventos/eventos.html')

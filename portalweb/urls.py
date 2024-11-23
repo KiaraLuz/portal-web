@@ -26,4 +26,9 @@ urlpatterns = [
     path('transparencias/', views.transparencias, name='transparencias'),
     path('resoluciones-actas-reglamentos/', views.resoluciones_actas_reglamentos, name='resoluciones_actas_reglamentos'),
     path('autoridades/', views.autoridades, name='autoridades'),
+    path('programacion/', views.programacion, name='programacion'),
+    path('gestion/', views.gestion, name='gestion'),
+    path('ciberseguridad/', views.ciberseguridad, name='ciberseguridad'),
+    path('bigdata/', views.bigdata, name='bigdata'),
+    path('eventos/', views.eventos, name='eventos'),
 ]
