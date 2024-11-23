@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Facultad</li>
+                    <li class="breadcrumb-item active" aria-current="page">Autoridades</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Autoridades de la Facultad</h1>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Decano -->
+        <div class="col-12 mb-4">
+            <div class="authority-card d-flex align-items-center">
+                <img src="{% static 'img/perfil.jpg' %}" alt="Decano" class="profile-img">
+                <div class="ms-3">
+                    <h3>Decano de la Facultad de Ingeniería Industrial y de Sistemas</h3>
+                    <p><strong>Dr. Jorge Victor Mayhuasca Guerra</strong></p>
+                    <p>Anexo: 8740</p>
+                    <p>Email: <a href="mailto:decanato.fiis@unfv.edu.pe">decanato.fiis@unfv.edu.pe</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Directores de las escuelas -->
+        <div class="col-md-6 mb-4">
+            <div class="authority-card d-flex align-items-center">
+                <img src="{% static 'img/perfil.jpg' %}" alt="Director de Sistemas" class="profile-img">
+                <div class="ms-3">
+                    <h4>Director de la Escuela Profesional de Ingeniería de Sistemas</h4>
+                    <p><strong>Dr. Flores Vidales, Higinio</strong></p>
+                    <p>Anexo: 8819</p>
+                    <p>Email: <a href="mailto:epis.fiis@unfv.edu.pe">epis.fiis@unfv.edu.pe</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="authority-card d-flex align-items-center">
+                <img src="{% static 'img/perfil.jpg' %}" alt="Directora de Agroindustrial" class="profile-img">
+                <div class="ms-3">
+                    <h4>Directora de la Escuela Profesional de Ingeniería Agroindustrial</h4>
+                    <p><strong>Dra. Angeles Lazo, Ana Maria</strong></p>
+                    <p>Anexo: 8728</p>
+                    <p>Email: <a href="mailto:epia.fiis@unfv.edu.pe">epia.fiis@unfv.edu.pe</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="authority-card d-flex align-items-center">
+                <img src="{% static 'img/perfil.jpg' %}" alt="Director de Transportes" class="profile-img">
+                <div class="ms-3">
+                    <h4>Director de la Escuela Profesional de Ingeniería de Transportes</h4>
+                    <p><strong>Dr. Flores Vidales, Higinio</strong></p>
+                    <p>Anexo: 8731</p>
+                    <p>Email: <a href="mailto:epit.fiis@unfv.edu.pe">epit.fiis@unfv.edu.pe</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="authority-card d-flex align-items-center">
+                <img src="{% static 'img/perfil.jpg' %}" alt="Director de Ingeniería Industrial" class="profile-img">
+                <div class="ms-3">
+                    <h4>Director de la Escuela Profesional de Ingeniería Industrial</h4>
+                    <p><strong>Dr. Batallanos Casas, Williams</strong></p>
+                    <p>Anexo: 8743</p>
+                    <p>Email: <a href="mailto:decanato.fiis@unfv.edu.pe">decanato.fiis@unfv.edu.pe</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título principal */
+    h1 {
+        font-size: 2rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    /* Tarjetas de autoridad */
+    .authority-card {
+        background-color: #f9f9f9;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .authority-card h3,
+    .authority-card h4 {
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .authority-card {
+        background-color: #f5f5f5; /* Fondo gris claro */
+        border: 2px dashed #aaa; /* Borde punteado de color gris oscuro */
+        border-radius: 10px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
+    }
+
+
+    /* Imagen del perfil */
+    .profile-img {
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ddd;
+    }
+</style>
+{% endblock %}
