@@ -40,7 +40,7 @@
         <!-- Directores de las escuelas -->
         <div class="col-md-6 mb-4">
             <div class="authority-card d-flex align-items-center">
-                <img src="{% static 'img/perfil.jpg' %}" alt="Director de Sistemas" class="profile-img">
+                <img src="{% static 'img/director_sistemas.jpg' %}" alt="Director de Sistemas" class="profile-img">
                 <div class="ms-3">
                     <h4>Director de la Escuela Profesional de Ingeniería de Sistemas</h4>
                     <p><strong>Dr. Flores Vidales, Higinio</strong></p>
@@ -52,7 +52,7 @@
 
         <div class="col-md-6 mb-4">
             <div class="authority-card d-flex align-items-center">
-                <img src="{% static 'img/perfil.jpg' %}" alt="Directora de Agroindustrial" class="profile-img">
+                <img src="{% static 'img/director_agroindustrial.jpg' %}" alt="Directora de Agroindustrial" class="profile-img">
                 <div class="ms-3">
                     <h4>Directora de la Escuela Profesional de Ingeniería Agroindustrial</h4>
                     <p><strong>Dra. Angeles Lazo, Ana Maria</strong></p>
@@ -64,7 +64,7 @@
 
         <div class="col-md-6 mb-4">
             <div class="authority-card d-flex align-items-center">
-                <img src="{% static 'img/perfil.jpg' %}" alt="Director de Transportes" class="profile-img">
+                <img src="{% static 'img/director_sistemas.jpg' %}" alt="Director de Transportes" class="profile-img">
                 <div class="ms-3">
                     <h4>Director de la Escuela Profesional de Ingeniería de Transportes</h4>
                     <p><strong>Dr. Flores Vidales, Higinio</strong></p>
@@ -132,16 +132,17 @@
     }
 
     .authority-card {
-        background-color: #f5f5f5; /* Fondo gris claro */
-        border: 2px dashed #aaa; /* Borde punteado de color gris oscuro */
-        border-radius: 10px; /* Bordes redondeados */
-        padding: 20px; /* Espaciado interno */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
+        background-color: #f5f5f5;
+        border: 2px dashed #aaa;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-
 
     /* Imagen del perfil */
     .profile-img {
+        width: 30%;
+        aspect-ratio: 1; /* Mantener la proporción de 1:1 (cuadrado perfecto) */
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid #ddd;
