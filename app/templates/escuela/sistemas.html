@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela</li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela Profesional de Ingeniería de Sistemas</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2 rutas">
+            <a>Presentación</a>
+            <a>Objetivos Educacionales</a>
+            <a>Competencias del Egresado</a>
+            <a>Plan de Estudios</a>
+            <a>Malla Curricular</a>
+        </div>
+
+        <div class="col-md-10 align-items-center contenido">
+            <div>
+                <h1>Sobre la carrera</h1>
+                <p>El estudiante de Ingeniería de Sistemas se especializa en el diseño, desarrollo y gestión de soluciones tecnológicas para optimizar los procesos organizacionales. Este profesional aplica tecnologías avanzadas como inteligencia artificial, ciberseguridad y gestión de datos para resolver problemas complejos en diversas industrias.</p>
+            </div>
+            <div>
+                <h1>Misión y Visión</h1>
+                <ul>
+                    <li>
+                        <strong>Misión:</strong> Formar ingenieros de sistemas competentes, innovadores y éticos, capaces de liderar la transformación digital y contribuir al desarrollo sostenible de la sociedad.
+                    </li>
+                    <li>
+                        <strong>Visión:</strong> Ser una escuela líder en la formación de profesionales en sistemas, reconocida por su excelencia académica y su impacto positivo en el ámbito tecnológico global.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h1>Director de Escuela</h1>
+                <div class="d-flex align-items-center contenido-director">
+                    <ul>
+                        <li>
+                            <strong>Director:</strong> Dr. Flores Vidales, Higinio
+                        </li>
+                        <li>
+                            <strong>Anexo:</strong> 8819
+                        </li>
+                        <li>
+                            <strong>Email:</strong> epis.fiis@unfv.edu.pe
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="{% static 'img/director_sistemas.jpg' %}" alt="Director de Sistemas" class="card-img-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 50px;
+        gap: 20px;
+    }
+
+    .contenido-director {
+        display: flex;
+        gap: 100px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .card-img-top {
+        width: 100px;
+        height: auto;
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+
+    .rutas {
+        display: flex;
+        flex-direction: column;
+        background-color: #D9D9D9;
+        padding: 20px 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rutas a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: #FFB969;
+        border-radius: 100px;
+        text-align: center;
+        width: 80%;
+    }
+</style>
+{% endblock %}
