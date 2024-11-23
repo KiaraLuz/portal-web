@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
+  {% block extra_css %}
+  <!-- Aquí se pueden agregar estilos específicos para la plantilla que extienda de base.html -->
+  {% endblock %}
+  
   <style>
     body {
       background-color: #f8f8f8;
@@ -76,11 +81,11 @@
               Facultad
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Reseña Histórica</a></li>
-              <li><a class="dropdown-item" href="#">Misión y Visión</a></li>
-              <li><a class="dropdown-item" href="#">Transparencias</a></li>
-              <li><a class="dropdown-item" href="#">Resoluciones, actas y reglamentos</a></li>
-              <li><a class="dropdown-item" href="#">Autoridades</a></li>
+              <li><a class="dropdown-item" href="{% url 'resena_historica' %}">Reseña Histórica</a></li>
+              <li><a class="dropdown-item" href="{% url 'mision_vision' %}">Misión y Visión</a></li>
+              <li><a class="dropdown-item" href="{% url 'transparencias' %}">Transparencias</a></li>
+              <li><a class="dropdown-item" href="{% url 'resoluciones_actas_reglamentos' %}">Resoluciones, actas y reglamentos</a></li>
+              <li><a class="dropdown-item" href="{% url 'autoridades' %}">Autoridades</a></li>
             </ul>
           </div>
           
@@ -130,17 +135,15 @@
               Capacitación
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Certificación</a></li>
-              <li><a class="dropdown-item" href="#">Internacionales</a></li>
-              <li><a class="dropdown-item" href="#">Empresariales</a></li>
-              <li><a class="dropdown-item" href="#">Trámites</a></li>
-              <li><a class="dropdown-item" href="#">Gobiernos Regionales</a></li>
-              <li><a class="dropdown-item" href="#">Municipales</a></li>
+              <li><a class="dropdown-item" href="{% url 'programacion' %}">Programación y desarrollo web</a></li>
+              <li><a class="dropdown-item" href="{% url 'gestion' %}">Gestion de proyectos tecnologicos</a></li>
+              <li><a class="dropdown-item" href="{% url 'ciberseguridad' %}">Ciberseguridad y protección de datos</a></li>
+              <li><a class="dropdown-item" href="{% url 'bigdata' %}">Big Data y analisis de datos</a></li>
             </ul>
           </div>
 
           <li class="nav-item">
-            <a class="nav-link">Eventos Académicos</a>
+            <a class="nav-link" href="{% url 'eventos' %}">Eventos Académicos</a>
           </li>
 
           <div class="dropdown">
@@ -150,9 +153,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Nacionales</a></li>
               <li><a class="dropdown-item" href="#">Internacionales</a></li>
-              <li><a class="dropdown-item" href="#">Empresariales</a></li>
-              <li><a class="dropdown-item" href="#">Gobiernos Regionales</a></li>
-              <li><a class="dropdown-item" href="#">Municipales</a></li>
+              <li><a class="dropdown-item" href="#">Redes interinstitucionales</a></li>
             </ul>
           </div>
         </ul>
