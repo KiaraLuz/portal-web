@@ -21,12 +21,9 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home, name="home"),
-    path("signin/", views.signin, name="signin"),
-    path("signup/", views.signup, name="signup"),
-    path("signout/", views.signout, name="signout"),
-    path("personal/", views.personal, name="personal"),
-    path('crear-empleado/', views.crear_empleado, name='crear_empleado'),
-    path('modificar_empleado/<int:empleado_id>/', views.modificar_empleado, name='modificar_empleado'),
-    path('eliminar-empleado/<int:empleado_id>/', views.eliminar_empleado, name='eliminar_empleado'),
-    path('detalle_empleado/<int:empleado_id>/', views.detalle_empleado, name='detalle_empleado'),
+    path('resena-historica/', views.resena_historica, name='resena_historica'),
+    path('mision-vision/', views.mision_vision, name='mision_vision'),
+    path('transparencias/', views.transparencias, name='transparencias'),
+    path('resoluciones-actas-reglamentos/', views.resoluciones_actas_reglamentos, name='resoluciones_actas_reglamentos'),
+    path('autoridades/', views.autoridades, name='autoridades'),
 ]

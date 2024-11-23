@@ -1,10 +1,146 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<main class="container mt-5">
-  <section class="card card-body">
-    <h1 class="display-1 text-center">Portal Web</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate fuga incidunt, voluptatem, sequi aut voluptas voluptatibus eos sint ratione rem, blanditiis expedita facilis error eius accusamus quos ducimus illo iusto delectus iste porro doloremque. Tempora, sequi laboriosam? Sed natus modi, illum exercitationem id accusantium assumenda optio ex maxime qui est iusto, cupiditate consequuntur nulla vel! Delectus ad tempore magnam fuga assumenda neque quas tempora iste ut nulla ducimus dolorum, quae vero? Placeat, impedit facere doloremque animi illo corporis ipsam soluta voluptas quibusdam eum rerum quos, eius laudantium obcaecati blanditiis delectus autem exercitationem fugit? Praesentium facilis rerum asperiores animi nisi sequi.</p>
-  </section>
+{% load static %}
+<main>
+  <img href="/" class="home" src="{% static 'img/home.png' %}" alt="Home"/>
+
+  <div class="container h-full">
+    <h1>FACULTAD DE INGENIERÍA INDUSTRIAL Y DE SISTEMAS</h1>
+  </div>
+
+  <div style="padding: 20px;">
+    <h1 class="encabezado">Noticias</h1>
+    <div class="cards container" style="justify-content: space-between;">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">11/11/2024</p>
+          <h5 class="card-title">Nuevas implementaciones para los laboratorios de la FIIS</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">11/11/2024</p>
+          <h5 class="card-title">Conferencia “Trastornos Psicológicos Más Comunes”</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">11/11/2024</p>
+          <h5 class="card-title">Expociencia EMCH CFB – 2019</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">11/11/2024</p>
+          <h5 class="card-title">XX Congreso Nacional de estudiantes de Ingeniería Agroindustrial</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-bottom: 20px;">
+    <h1 class="encabezado">Servicios</h1>
+    <div class="cards container" style="justify-content: space-between;">
+      <div class="card" style="width: 12rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">Directorio Telefónico</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 12rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">Plana Docente</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 12rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">Consultas Bibliográficas</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 12rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">Trámites</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 12rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">Bolsa de Trabajo</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 12rem;">
+        <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">Horarios</h5>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
+
+<style>
+  .h5 {
+    font-size: 40px;
+  }
+
+  .encabezado {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: #902020;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-text {
+    font-size: 12px;
+    margin: 0px;
+  }
+
+  .card-title {
+    color: #902020;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .h-full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1;
+    color: #fff
+  }
+  .home {
+    width: 100%;
+    height: calc(100vh);
+    position: absolute;
+    z-index: -1;
+  }
+</style>
 {% endblock %}

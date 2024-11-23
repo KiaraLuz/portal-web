@@ -1,97 +1,28 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth import authenticate, login, logout
-from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.models import User
-from django.db import IntegrityError
-from .models import Empleado
-from django.contrib.auth.decorators import login_required
-from .forms import EmpleadoForm
+from django.shortcuts import render
 
 def home(request):
     return render(request, 'home.html') 
 
-def signup(request):
-    if request.method == 'GET':
-        return render(request, 'signup.html')
-    else:
-        username = request.POST.get('username')
-        password1 = request.POST.get('password1')
-        password2 = request.POST.get('password2')
+def resena_historica(request):
+    return render(request, 'facultad/resena_historica.html')
 
-        if password1 and password2 and password1 == password2:
-            try:
-                user = User.objects.create_user(username=username, password=password1)
-                user.save()
-                login(request, user)
-                return redirect('home')
-            except IntegrityError:
-                return render(request, 'signup.html', {
-                    'error': 'El usuario ya existe.'
-                })
-        else:
-            return render(request, 'signup.html', {
-                'error': 'Las contraseñas no coinciden.'
-            })
+def mision_vision(request):
+    return render(request, 'facultad/mision_vision.html')
 
-def signin(request):
-    if request.method == 'GET':
-        return render(request, 'signin.html', {
-            'form': AuthenticationForm
-        })
-    else:
-        user = authenticate(
-            request, username=request.POST['username'], password=request.POST['password'])
-        if user is None:
-            return render(request, 'signin.html', {
-                'form': AuthenticationForm,
-                'error': 'Username or password is incorrect'
-            })
-        else:
-            login(request, user)
-            return redirect('home')
-        
-def signout(request):
-    logout(request)
-    return redirect('home')
+def transparencias(request):
+    documentos = [
+        {"titulo": "Estatuto de la Universidad", "enlace": "/ruta/estatuto.pdf"},
+        {"titulo": "Reglamento General", "enlace": "/ruta/reglamento.pdf"},
+        {"titulo": "Decretos Supremos", "enlace": "/ruta/decretos.pdf"},
+        {"titulo": "Plan Estratégico Institucional", "enlace": "/ruta/plan.pdf"},
+        {"titulo": "Información del Presupuesto Institucional", "enlace": "/ruta/presupuesto.pdf"},
+        {"titulo": "Información Académica", "enlace": "/ruta/academica.pdf"},
+        {"titulo": "Información Docente", "enlace": "/ruta/docente.pdf"},
+    ]
+    return render(request, 'facultad/transparencias.html', {'documentos': documentos})
 
-@login_required  
-def personal(request):
-    empleados = Empleado.objects.filter(usuario=request.user)
-    return render(request, 'personal/personal.html', {'empleados': empleados})
+def resoluciones_actas_reglamentos(request):
+    return render(request, 'facultad/resoluciones_actas_reglamentos.html')
 
-@login_required
-def crear_empleado(request):
-    if request.method == 'POST':
-        form = EmpleadoForm(request.POST)
-        if form.is_valid():
-            empleado = form.save(commit=False)
-            empleado.usuario = request.user  
-            empleado.save()
-            return redirect('personal')
-    else:
-        form = EmpleadoForm()
-    return render(request, 'personal/crear_empleado.html', {'form': form})
-
-@login_required
-def modificar_empleado(request, empleado_id):
-    empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user)
-    if request.method == 'POST':
-        form = EmpleadoForm(request.POST, instance=empleado)
-        if form.is_valid():
-            form.save()
-            return redirect('personal')
-    else:
-        form = EmpleadoForm(instance=empleado)
-    return render(request, 'personal/modificar_empleado.html', {'form': form, 'empleado': empleado})
-
-@login_required
-def eliminar_empleado(request, empleado_id):
-    empleado = get_object_or_404(Empleado, id=empleado_id, usuario=request.user) # Obtener empleado
-    empleado.delete() # Eliminar empleado
-    messages.success(request, "Empleado eliminado exitosamente.") # Mensaje de éxito
-    return redirect('personal') # Redirigir a la lista de empleados
-@login_required
-def detalle_empleado(request, empleado_id):
-    empleado = get_object_or_404(Empleado, id=empleado_id)
-    return render(request, 'personal/detalle_empleado.html', {'empleado': empleado})
+def autoridades(request):
+    return render(request, 'facultad/autoridades.html')
