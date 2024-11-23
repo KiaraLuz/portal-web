@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Eventos Académicos</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Mensaje introductorio -->
+    <div class="row mt-3">
+        <div class="col-12">
+            <p>
+                Nuestra universidad se enorgullece de presentar diversos eventos académicos, culturales y profesionales en los próximos meses, 
+                que incluyen conferencias, talleres y ferias de empleo. Estos eventos ofrecen oportunidades para aprender, innovar y establecer 
+                redes de contacto, invitando a toda la comunidad universitaria a participar y aprovechar al máximo estas experiencias.
+            </p>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h3 class="text-uppercase font-weight-bold">Próximos Eventos</h3>
+        </div>
+    </div>
+
+    <!-- Carrusel -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div id="eventosCarrusel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Contenedor de los elementos del carrusel -->
+                <div class="carousel-inner">
+                    <!-- Grupo 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Evento 1</h5>
+                                        <img src="{% static 'img/event.jpg' %}" class="card-img-top mb-3" alt="Evento">
+                                        <a href="#" class="btn btn-primary">Más info</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Evento 2</h5>
+                                        <img src="{% static 'img/event.jpg' %}" class="card-img-top mb-3" alt="Evento">
+                                        <a href="#" class="btn btn-primary">Más info</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Evento 3</h5>
+                                        <img src="{% static 'img/event.jpg' %}" class="card-img-top mb-3" alt="Evento">
+                                        <a href="#" class="btn btn-primary">Más info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Grupo 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Evento 4</h5>
+                                        <img src="{% static 'img/event.jpg' %}" class="card-img-top mb-3" alt="Evento">
+                                        <a href="#" class="btn btn-primary">Más info</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Evento 5</h5>
+                                        <img src="{% static 'img/event.jpg' %}" class="card-img-top mb-3" alt="Evento">
+                                        <a href="#" class="btn btn-primary">Más info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles del carrusel -->
+                <a class="carousel-control-prev" href="#eventosCarrusel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#eventosCarrusel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Títulos */
+    h3 {
+        color: #902020;
+    }
+
+    /* Tarjetas */
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #902020;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #700000;
+    }
+
+    /* Carrusel */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(100%);
+    }
+
+    /* Ajustar las flechas del carrusel */
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        width: 5%; /* Ajusta el tamaño del área clicable si es necesario */
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .carousel-control-prev {
+        left: -5%; /* Coloca la flecha al extremo izquierdo */
+    }
+
+    .carousel-control-next {
+        right: -5%; /* Coloca la flecha al extremo derecho */
+    }
+</style>
+{% endblock %}
