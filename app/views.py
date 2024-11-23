@@ -27,6 +27,12 @@ def resoluciones_actas_reglamentos(request):
 def autoridades(request):
     return render(request, 'facultad/autoridades.html')
 
+def sistemas(request):
+    return render(request, 'escuela/sistemas.html')
+
+def gestion_academica(request):
+    return render(request, 'estudiantes/gestion_academica.html')
+
 def programacion(request):
     return render(request, 'capacitacion/programacion.html')
 
