@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Facultad</li>
+                    <li class="breadcrumb-item active" aria-current="page">Reseña Histórica</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Reseña Histórica</h1>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Texto principal -->
+        <div class="col-md-8">
+            <p>
+                La Facultad de Ingeniería Industrial y de Sistemas (FIIS) de la UNFV fue creada el 25 de marzo de 1964.
+                Inicialmente, funcionó como Escuela de Ingeniería de Producción en la Facultad de Ciencias Económicas y
+                Comerciales. En 1969, se reorganizó como el
+                Programa Académico de Formación Profesional de Ingeniería de Producción, gracias a la iniciativa de
+                destacados docentes como el Lic. Luis Salazar Larraín, el Ing. Luis Sánchez Bazalar y el Ing. Santiago
+                Segura Rodríguez.
+            </p>
+            <p>
+                En 1974, se formalizó el Departamento Académico de Ingeniería Industrial mediante la Resolución Rectoral
+                Nº 10243-74-CR. En 1976, se formó una Comisión Reestructuradora, seguida en 1978 por una Comisión
+                Asesora y una Comisión de Implementación. Estos esfuerzos, liderados por docentes destacados, culminaron
+                en la creación de la Facultad de Ingeniería Industrial y de Sistemas.
+            </p>
+            <p>
+                La Escuela Profesional de Ingeniería de Sistemas fue creada el 27 de enero de 1987
+                mediante la Resolución Rectoral Nº 009-87-FIIS-UNFV. Entre los miembros de su comisión fundadora se
+                destacaron:
+            </p>
+            <ul>
+                <li>Ing. Rodolfo Velarde Palomino</li>
+                <li>Ing. Ilmer Cóndor Espinoza</li>
+                <li>Ing. Renato Gibellini Vecchini</li>
+                <li>Lic. Edmundo Barrantes Ríos</li>
+                <li>Ing. Zonia Geldres Benites</li>
+                <li>Lic. Manuel de Priego Carbajal</li>
+                <li>Ing. Roberto Esparza Silva</li>
+                <li>Ing. Efren Michue Salguedo</li>
+                <li>Ing. Cristina Alzamora Rivero</li>
+            </ul>
+            <p>
+                En 1989, bajo la Resolución Rectoral Nº 5060-89-UNFV, se crearon dos nuevas escuelas profesionales:
+            </p>
+            <ul>
+                <li><strong>Ingeniería Agroindustrial (28.03.1989)</strong>: Para la preservación y transformación de
+                    productos agropecuarios.</li>
+                <li><strong>Ingeniería de Transportes (13.04.1989)</strong>: Para la gestión eficiente de empresas de
+                    transporte.</li>
+            </ul>
+            <p>
+                Estas iniciativas consolidaron a la FIIS como un referente en la formación de ingenieros altamente
+                capacitados.
+            </p>
+        </div>
+
+        <!-- Imagen -->
+        <div class="col-md-4 d-flex align-items-center">
+            <img src="{% static 'img/resena_historica.jpg' %}" class="image" alt="Reseña Histórica">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Sección principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Imagen */
+    .image {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+</style>
+{% endblock %}

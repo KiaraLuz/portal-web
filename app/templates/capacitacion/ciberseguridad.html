@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Capacitación</li>
+                    <li class="breadcrumb-item active" aria-current="page">Ciberseguridad y protección de datos</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Subtítulo principal -->
+    <div class="row mt-3">
+        <div class="col-12">
+            <h4 class="text-left font-weight-bold" style="text-decoration: underline;">Cursos de Capacitación</h4>
+        </div>
+    </div>
+
+    <!-- Mensaje introductorio -->
+    <div class="row mt-2">
+        <div class="col-12">
+            <p>Diseñados para quienes desean capacitarse en temas específicos en programación y desarrollo web, gestión de proyectos tecnológicos, ciberseguridad y protección de datos, big data y análisis de datos.</p>
+        </div>
+    </div>
+
+    <!-- Subtítulo específico -->
+    <div class="row mt-3">
+        <div class="col-12">
+            <h5 class="text-left font-weight-bold">Ciberseguridad y protección de datos</h5>
+        </div>
+    </div>
+
+    <!-- Descripción -->
+    <div class="row mt-2">
+        <div class="col-12">
+            <p>
+                "La seguridad es una prioridad en el mundo digital, y tú puedes ser parte de la solución. Con nuestros
+                cursos en Ciberseguridad, aprenderás desde los fundamentos de la protección de redes hasta las técnicas
+                avanzadas de pruebas de penetración y gestión de vulnerabilidades. Prepárate para enfrentar los desafíos
+                del ciberespacio y ser un experto en proteger la información más valiosa. ¡Únete a la batalla contra las
+                amenazas digitales con nuestra formación en Ciberseguridad!"
+            </p>
+        </div>
+    </div>
+
+    <!-- Paneles -->
+    <div class="row mt-4">
+        <!-- Panel 1 -->
+        <div class="col-md-4 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title font-weight-bold">Introducción a la Ciberseguridad</h6>
+                    <img src="{% static 'img/ciberseguridad.jpg' %}" class="card-img-top mb-3" alt="Desarrollo Web">
+                    <a href="#" class="btn btn-primary">Inscribirse</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="col-md-4 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title font-weight-bold">Curso avanzado en Pentesting (Pruebas de Penetración)</h6>
+                    <img src="{% static 'img/pentesting.jpg' %}" class="card-img-top mb-3" alt="Programación">
+                    <a href="#" class="btn btn-primary">Inscribirse</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="col-md-4 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title font-weight-bold">Seguridad en redes y criptografía</h6>
+                    <img src="{% static 'img/criptografia.jpg' %}" class="card-img-top mb-3" alt="Aplicaciones Móviles">
+                    <a href="#" class="btn btn-primary">Inscribirse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Títulos */
+    h4, h5 {
+        color: #902020;
+    }
+
+    /* Tarjetas */
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #902020;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #700000;
+    }
+</style>
+{% endblock %}
