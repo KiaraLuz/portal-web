@@ -19,7 +19,7 @@
     <!-- Título principal -->
     <div class="row">
         <div class="col-12 text-center">
-            <h1>Transparencia Universitaria</h1>
+            <h1>Transparencias</h1>
             <p class="lead text-muted">
                 Según los requerimientos de la Superintendencia Nacional de Educación Superior Universitaria – SUNEDU y
                 la Ley Universitaria (Ley N° 30220), nuestra Facultad expone públicamente la información requerida a sus
@@ -30,15 +30,59 @@
 
     <!-- Tarjetas -->
     <div class="row mt-4">
-        {% for item in documentos %}
         <div class="col-md-4 col-sm-6 mb-4 text-center">
             <div class="transparency-card">
-                <div class="circle-icon"></div>
-                <h5 class="mt-3">{{ item.titulo }}</h5>
-                <a href="{{ item.enlace }}" class="btn btn-orange mt-2" target="_blank">Descargar</a>
+                <img src="{% static 'img/icon_estatuto.png' %}" class="circle-icon">
+                <h5 class="mt-3">Estatuto de la Universidad</h5>
+                <a href="https://www.unfv.edu.pe/transparencia_universitaria/documentos_gestion_reglamentos/estatuto_universidad/estatuto_unfv_modificatorias_2019_final.pdf"
+                    class="btn btn-orange mt-2" target="_blank">Ver Información</a>
             </div>
         </div>
-        {% endfor %}
+
+        <div class="col-md-4 col-sm-6 mb-4 text-center">
+            <div class="transparency-card">
+                <img src="{% static 'img/icon_reglamento.png' %}" class="circle-icon">
+                <h5 class="mt-3">Reglamento General</h5>
+                <a href="https://www.unfv.edu.pe/transparencia_universitaria/documentos_gestion_reglamentos/reglamentos_universidad/reglamento_general/documento_reglamento_general.pdf"
+                    class="btn btn-orange mt-2" target="_blank">Ver Información</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4 text-center">
+            <div class="transparency-card">
+                <img src="{% static 'img/icon_plan.png' %}" class="circle-icon">
+                <h5 class="mt-3">Plan Estratégico Institucional</h5>
+                <a href="https://www.unfv.edu.pe/transparencia_universitaria/documentos_gestion_reglamentos/plan_estrategico.pdf"
+                    class="btn btn-orange mt-2" target="_blank">Ver Información</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4 text-center">
+            <div class="transparency-card">
+                <img src="{% static 'img/icon_remunerativa.png' %}" class="circle-icon">
+                <h5 class="mt-3">Información Remunerativa</h5>
+                <a href="https://www.unfv.edu.pe/transparencia/transparencia-universitaria/informacion-remunerativa"
+                    class="btn btn-orange mt-2" target="_blank">Ver Información</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4 text-center">
+            <div class="transparency-card">
+                <img src="{% static 'img/icon_academica.png' %}" class="circle-icon">
+                <h5 class="mt-3">Información Académica</h5>
+                <a href="https://www.unfv.edu.pe/transparencia/transparencia-universitaria/informacion-academica"
+                    class="btn btn-orange mt-2" target="_blank">Ver Información</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4 text-center">
+            <div class="transparency-card">
+                <img src="{% static 'img/icon_docente.png' %}" class="circle-icon">
+                <h5 class="mt-3">Información Docente</h5>
+                <a href="https://www.unfv.edu.pe/transparencia/transparencia-universitaria/informacion-docente"
+                    class="btn btn-orange mt-2" target="_blank">Ver Información</a>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -76,7 +120,7 @@
 
     /* Tarjetas */
     .transparency-card {
-        background-color: #f9f9f9;
+        background-color: #ffffff;
         border: 2px solid #ddd;
         border-radius: 10px;
         padding: 20px;
@@ -95,11 +139,13 @@
     }
 
     .circle-icon {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-        background-color: #555;
+        border: 3px solid #dc7c28;
+        background-color: #ffffff;
         margin: 0 auto;
+        object-fit: contain;
     }
 
     .btn-orange {

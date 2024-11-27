@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Correo institucional</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Correo institucional</h1>
+            <p class="lead text-muted">
+                Disfruta de los beneficios a tráves del correo institucional como docente, alumno o personal administrativo.            </p>
+                <a href="https://outlook.office.com/mail/" target="_blank" class="btn btn-primary">Ir al correo institucional</a>
+            </div>
+    </div>
+
+    <style>
+        .card-img-top {
+            width: 100%;         /* La imagen ocupa todo el ancho disponible */
+            height: auto;        /* Mantiene la proporción original de la imagen */
+            max-height: 200px;   /* Limita la altura máxima para mantener un diseño uniforme */
+            object-fit: contain; /* Escala la imagen para que toda sea visible dentro del contenedor */
+        }
+    </style>
+    
+    <div class="container mt-4">
+        <!-- Primera fila -->
+        <div class="row">
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <img src="https://www.unfv.edu.pe/images/servicios_linea/correo_institucional/onedrive.png" class="card-img-top mb-3" alt="OneDrive">
+                        <h6 class="card-title font-weight-bold">OneDrive</h6>                       
+                        <p>1 TB de Almacenamiento en la Nube a través de OneDrive</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <img src="https://www.unfv.edu.pe/images/estudiantes/correo_institucional/outlook.png" class="card-img-top mb-3" alt="Outlook">
+                        <h6 class="card-title font-weight-bold">Outlook</h6>
+                        <p>Bandeja de Entrada con capacidad de hasta 50 GB y archivos adjuntos de hasta 25 MB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Segunda fila -->
+        <div class="row">
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <img src="https://www.unfv.edu.pe/images/estudiantes/correo_institucional/red_yammer.png" class="card-img-top mb-3" alt="Yammer">
+                        <h6 class="card-title font-weight-bold">Yammer</h6>
+                        <p>Interáctua con otras personas a través de la red social Yammer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <img src="https://www.unfv.edu.pe/images/servicios_linea/correo_institucional/dispositivo.png" class="card-img-top mb-3" alt="Medio">
+                        <h6 class="card-title font-weight-bold">Medio</h6>
+                        <p>Disponible en Tablet, Laptop, Móvil Android, Mac</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .contenido {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 50px;
+        gap: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .card-img-top {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .rutas {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-weight: bold;
+    }
+
+    .rutas a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: #FFB969;
+        border-radius: 100px;
+        text-align: center;
+        width: 100%;
+        color: #000
+    }
+</style>
+{% endblock %}

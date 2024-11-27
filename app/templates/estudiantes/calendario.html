@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Calendario académico</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Calendario académico</h1>
+            <p class="lead text-muted">
+                El calendario académico establece la programación de los exámenes parciales, finales, evaluaciones, feriados, entre otras fechas importantes para el desarrollo del ciclo.            </p>
+        </div>
+    </div>
+
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Ajusta según lo que prefieras */
+            object-fit: cover; /* Asegura que la imagen se recorte proporcionalmente para encajar */
+        }
+    </style>
+    
+    <div class="container mt-4">
+        <!-- Primera fila -->
+        <div class="row">
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">Calendario académico 2024</h6>                       
+                        <img src="https://pbs.twimg.com/profile_images/1819008944032870400/xPxkXidS_400x400.jpg" class="card-img-top mb-3" alt="Programación">
+                        
+                        <a href="https://www.unfv.edu.pe/images/pdf/2024/calendario_academico_2024.pdf" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">Calendario académico 2023</h6>
+                        <img src="https://pbs.twimg.com/profile_images/1819008944032870400/xPxkXidS_400x400.jpg" class="card-img-top mb-3" alt="Aplicaciones Móviles">
+                        
+                        <a href="https://www.unfv.edu.pe/images/pdf/2023/Res.1375_CalendarioAcademico2023.pdf" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Segunda fila -->
+        <div class="row">
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">Calendario académico 2022</h6>
+                        <img src="https://pbs.twimg.com/profile_images/1819008944032870400/xPxkXidS_400x400.jpg" class="card-img-top mb-3" alt="Programación">
+                        
+                        <a href="https://www.unfv.edu.pe/images/estudiantes/calendario_academico/CalendarioAcademico2022_Modificado.pdf" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">Calendario académico 2021</h6>
+                        <img src="https://pbs.twimg.com/profile_images/1819008944032870400/xPxkXidS_400x400.jpg" class="card-img-top mb-3" alt="Aplicaciones Móviles">
+                        
+                        <a href="https://www.unfv.edu.pe/images/estudiantes/calendario_academico/Calendario-acadmico-UNFV-2021.pdf" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- tercera fila -->
+        <div class="row">
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">Calendario académico 2020</h6>
+                        <img src="https://pbs.twimg.com/profile_images/1819008944032870400/xPxkXidS_400x400.jpg" class="card-img-top mb-3" alt="Programación">
+                        
+                        <a href="https://www.unfv.edu.pe/images/estudiantes/calendario_academico/calendario2020.pdf" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">Directiva de actividades</h6>
+                        <img src="https://pbs.twimg.com/profile_images/1819008944032870400/xPxkXidS_400x400.jpg" class="card-img-top mb-3" alt="Aplicaciones Móviles">
+                        
+                        <a href="https://www.unfv.edu.pe/images/pdf/2020/setiembre/Res7630_DirectivaNoPresencial.pdf" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    p.lead {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+    }
+
+    /* Tarjetas */
+    .transparency-card {
+        background-color: #ffffff;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .transparency-card:hover {
+        transform: scale(1.05);
+    }
+
+    .transparency-card h5 {
+        font-size: 1.2rem;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .circle-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #dc7c28;
+        background-color: #ffffff;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .btn-orange {
+        background-color: #f79c42;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-orange:hover {
+        background-color: #dc7c28;
+        color: #fff;
+    }
+</style>
+{% endblock %}

@@ -84,7 +84,7 @@
               <li><a class="dropdown-item" href="{% url 'resena_historica' %}">Reseña Histórica</a></li>
               <li><a class="dropdown-item" href="{% url 'mision_vision' %}">Misión y Visión</a></li>
               <li><a class="dropdown-item" href="{% url 'transparencias' %}">Transparencias</a></li>
-              <li><a class="dropdown-item" href="{% url 'resoluciones_actas_reglamentos' %}">Resoluciones, actas y reglamentos</a></li>
+              <li><a class="dropdown-item" href="{% url 'reglamentos' %}">Reglamentos</a></li>
               <li><a class="dropdown-item" href="{% url 'autoridades' %}">Autoridades</a></li>
             </ul>
           </div>
@@ -106,7 +106,7 @@
               Investigación
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Biblioteca Virtual</a></li>
+              <li><a class="dropdown-item" href="{% url 'biblioteca' %}">Biblioteca Virtual</a></li>
             </ul>
           </div>
 
@@ -115,10 +115,10 @@
               Estudiantes
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Correo Institucional</a></li>
-              <li><a class="dropdown-item" href="#">Calendario Académico</a></li>
-              <li><a class="dropdown-item" href="#">Bolsa de Trabajo</a></li>
-              <li><a class="dropdown-item" href="#">Trámites</a></li>
+              <li><a class="dropdown-item" href="{% url 'correo' %}">Correo Institucional</a></li>
+              <li><a class="dropdown-item" href="{% url 'calendario' %}">Calendario Académico</a></li>
+              <li><a class="dropdown-item" href="{% url 'trabajo' %}">Bolsa de Trabajo</a></li>
+              <li><a class="dropdown-item" href="{% url 'tramite' %}">Trámites</a></li>
               <li><a class="dropdown-item" href="{% url 'gestion_academica' %}">Gestión Académica</a></li>
               <li><a class="dropdown-item" href="#">Gestión Administrativa</a></li>
               <li><a class="dropdown-item" href="#">Segundas Especialidades</a></li>
