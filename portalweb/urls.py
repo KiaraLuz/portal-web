@@ -33,4 +33,9 @@ urlpatterns = [
     path('ciberseguridad/', views.ciberseguridad, name='ciberseguridad'),
     path('bigdata/', views.bigdata, name='bigdata'),
     path('eventos/', views.eventos, name='eventos'),
+    path('biblioteca/', views.biblioteca, name='biblioteca'),
+    path('correo/', views.correo, name='correo'),
+    path('calendario/', views.calendario, name='calendario'),
+    path('trabajo/', views.trabajo, name='trabajo'),
+    path('tramite/', views.tramite, name='tramite'),
 ]

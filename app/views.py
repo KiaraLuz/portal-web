@@ -38,3 +38,18 @@ def bigdata(request):
 
 def eventos(request):
     return render(request, 'eventos/eventos.html')
+
+def biblioteca(request):
+    return render(request, 'investigacion/biblioteca.html')
+
+def correo(request):
+    return render(request, 'estudiantes/correo.html')
+
+def calendario(request):
+    return render(request, 'estudiantes/calendario.html')
+
+def trabajo(request):
+    return render(request, 'estudiantes/trabajo.html')
+
+def tramite(request):
+    return render(request, 'estudiantes/tramite.html')

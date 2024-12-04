@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Bolsa de trabajo</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!-- Tarjetas -->
+    <div class="contenedor-t">
+        <div class="row mt-4 d-flex justify-content-between">
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="transparency-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9495/9495771.png" class="circle-icon">
+                    <h5 class="mt-3">290</h5>
+                    <h5 class="mt-3">Ofertas laborales registradas</h5>
+                </div>
+            </div>
+    
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="transparency-card">
+                    <img src="https://cdn-icons-png.flaticon.com/256/3374/3374417.png" class="circle-icon">
+                    <h5 class="mt-3">93</h5>
+                    <h5 class="mt-3">Ofertas laborales activos</h5>
+                    
+                </div>
+            </div>
+    
+            <div class="col-md-4 col-sm-6 mb-4 text-center">
+                <div class="transparency-card">
+                    <img src="https://cdn.icon-icons.com/icons2/516/PNG/512/jobs_craiglist_icon-icons.com_51083.png" class="circle-icon">
+                    <h5 class="mt-3">9168</h5>
+                    <h5 class="mt-3">Empresas registradas</h5>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Bolsa de Trabajo</h1>
+        </div>
+    </div>
+
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Ajusta según lo que prefieras */
+            object-fit: cover; /* Asegura que la imagen se recorte proporcionalmente para encajar */
+        }
+    </style>
+    
+    <div class="container mt-4">
+        <!-- Primera fila -->
+        <div class="row">
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">SUNAT</h6>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdD2rScNSEM0rtyg8mokIlJdl7KPTu3lnWeg&s" class="card-img-top mb-3" alt="Programación">
+                        <p class="card-text">La SUNAT es la entidad encargada de la recaudación de impuestos y la fiscalización en Perú. Ofrece diversos servicios a los contribuyentes para el cumplimiento de sus obligaciones tributarias.</p>
+                        <a href="#" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">SUNARP</h6>
+                        <img src="https://www.estudiodelion.com.pe/wp-content/uploads/2022/05/sunarp.jpg" class="card-img-top mb-3" alt="Aplicaciones Móviles">
+                        <p class="card-text">La SUNARP se encarga del registro público de la propiedad, tales como bienes inmuebles, vehículos y derechos. Ofrece servicios de seguridad jurídica para los ciudadanos y las empresas.</p>
+                        <a href="#" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segunda fila -->
+        <div class="row">
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">INTERBANK</h6>
+                        <img src="https://s3.amazonaws.com/media.greatplacetowork.com/peru/best-workplaces-for-diversity-and-inclusion-in-peru/2021/interbank/logo.jpg" class="card-img-top mb-3" alt="Programación">
+                        <p class="card-text">Interbank es uno de los principales bancos del Perú, ofreciendo una gama de servicios financieros que incluyen cuentas, créditos y seguros para personas y empresas.</p>
+                        <a href="#" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 text-center">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h6 class="card-title font-weight-bold">BCP</h6>
+                        <img src="https://ocpe.cip.org.pe/wp-content/uploads/2023/08/agente-bcp.jpg" class="card-img-top mb-3" alt="Aplicaciones Móviles">
+                        <p class="card-text">El Banco de Crédito del Perú (BCP) es una de las principales instituciones financieras del país, ofreciendo soluciones de ahorro, inversión, y crédito tanto a personas como a empresas.</p>
+                        <a href="#" target="_blank" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+
+    
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .contenedor-t{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding:0px 20px;
+        justify-content:center;
+        align-items: space-between;
+        height: 250px;
+        gap: 20px;
+        background-color: #902020;
+    }
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    p.lead {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+    }
+
+    /* Tarjetas */
+    .transparency-card {
+       
+        background-color: #902020;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .transparency-card:hover {
+        transform: scale(1.05);
+    }
+
+    .transparency-card h5 {
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bold;
+    }
+
+    .circle-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #dc7c28;
+        background-color: #ffffff;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .btn-orange {
+        background-color: #f79c42;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-orange:hover {
+        background-color: #dc7c28;
+        color: #fff;
+    }
+    
+</style>
+{% endblock %}
