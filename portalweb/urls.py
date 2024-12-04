@@ -41,4 +41,10 @@ urlpatterns = [
     path('calendario/', views.calendario, name='calendario'),
     path('trabajo/', views.trabajo, name='trabajo'),
     path('tramite/', views.tramite, name='tramite'),
+    path('gestion-academica/', views.gestion_academica, name='gestion_academica'),
+    path('gestion-administrativa/', views.gestion_administrativa, name='gestion_administrativa'),
+    path('segunda-especialidad/', views.segunda_especialidad, name='segunda_especialidad'),
+    path('nacionales/', views.nacionales, name='nacionales'),
+    path('internacionales/', views.internacionales, name='internacionales'),
+    path('interinstitucionales/', views.interinstitucionales, name='interinstitucionales'),
 ]

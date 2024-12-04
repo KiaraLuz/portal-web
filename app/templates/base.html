@@ -120,8 +120,8 @@
               <li><a class="dropdown-item" href="{% url 'trabajo' %}">Bolsa de Trabajo</a></li>
               <li><a class="dropdown-item" href="{% url 'tramite' %}">Trámites</a></li>
               <li><a class="dropdown-item" href="{% url 'gestion_academica' %}">Gestión Académica</a></li>
-              <li><a class="dropdown-item" href="#">Gestión Administrativa</a></li>
-              <li><a class="dropdown-item" href="#">Segundas Especialidades</a></li>
+              <li><a class="dropdown-item" href="{% url 'gestion_administrativa' %}">Gestión Administrativa</a></li>
+              <li><a class="dropdown-item" href="{% url 'segunda_especialidad' %}">Segundas Especialidades</a></li>
               <li><a class="dropdown-item" href="#">TUPA</a></li>
             </ul>
           </div>
@@ -151,9 +151,9 @@
               Convenios
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Nacionales</a></li>
-              <li><a class="dropdown-item" href="#">Internacionales</a></li>
-              <li><a class="dropdown-item" href="#">Redes interinstitucionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'nacionales' %}">Nacionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'internacionales' %}">Internacionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'interinstitucionales' %}">Redes interinstitucionales</a></li>
             </ul>
           </div>
         </ul>

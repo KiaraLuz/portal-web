@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Gestión administrativa</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Gestión administrativa UNFV</h1>
+            <p>
+                Es la encargada de la gestión de los sistemas administrativos: planeamiento, recursos humanos, abastecimientos y servicios auxiliares, tesorería, ejecución y evaluación presupuestal de la Facultad, en función a las normas derivadas de la DIGA y de las Oficinas Centrales que corresponda, según su ámbito de competencia. Depende del Decano. 
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección de contenido -->
+    <div class="row mt-4">
+        <!-- Funciones -->
+        <div class="col-md-8">
+            <h2>Funciones</h2>
+            <ul>
+                <li>Apoya al Decano en el Consejo de Facultad en aspectos de planeamiento y políticas de desarrollo de la facultad.</li>
+                <li>Formula el Plan Operativo, presupuesto y la memoria anual de la Facultad en coordinación con todas las unidades orgánicas que las integran.</li>
+                <li>
+                    Elabora entre otros documentos de gestión, el anteproyecto del cuadro de puesto de la facultad, manual de perfiles de puestos, manual de procedimientos y otros documentos técnicos normativos en coordinación con las directrices de la Dirección General de Administración (DIGA) y las Oficinas Centrales.
+                </li>
+                <li>Organiza equipos de trabajo en función a procesos para el desarrollo de procedimientos y actividades tendentes al logro de objetivos y metas preestablecidas.</li>
+            </ul>
+        </div>
+
+        <!-- Imagen -->
+        <div class="col-md-4 text-center">
+            <img class="img-fluid" src="https://www.mademi.com/images/servicios/destacada-gestion-administrativa.jpg" alt="Gestión Administrativa">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    /* Funciones */
+    h2 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+
+    li {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    /* Imagen */
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* General */
+    .row {
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
