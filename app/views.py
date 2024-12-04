@@ -72,6 +72,12 @@ def gestion_administrativa(request):
 def segunda_especialidad(request):
     return render(request, 'estudiantes/segunda_especialidad.html')
 
+def tupa(request):
+    return render(request, 'estudiantes/tupa.html')
+
+def oficinas(request):
+    return render(request, 'oficinas/oficinas.html')
+
 def nacionales(request):
     return render(request, 'convenios/nacionales.html')
 
