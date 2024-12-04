@@ -21,6 +21,15 @@ def autoridades(request):
 def sistemas(request):
     return render(request, 'escuela/sistemas.html')
 
+def transportes(request):
+    return render(request, 'escuela/transportes.html')
+
+def agroindustrial(request):
+    return render(request, 'escuela/agroindustrial.html')
+
+def industrial(request):
+    return render(request, 'escuela/industrial.html')
+
 def gestion_academica(request):
     return render(request, 'estudiantes/gestion_academica.html')
 
