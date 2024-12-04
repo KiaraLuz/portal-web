@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <!-- Breadcrumb de navegación -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela</li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela Profesional de Ingeniería Industrial</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2 rutas">
+            <!-- Enlaces de navegación lateral con anclas -->
+            <a href="#presentacion">Presentación</a>
+            <a href="#objetivos">Objetivos Educacionales</a>
+            <a href="#competencias">Competencias del Egresado</a>
+            <a href="#plan-estudios">Plan de Estudios</a>
+            <a href="#malla">Malla Curricular</a>
+        </div>
+
+        <div class="col-md-10 align-items-center contenido">
+            <!-- Información sobre la carrera -->
+            <div>
+                <h1 class="mb-4">Sobre la carrera</h1>
+                <p>El estudiante de Ingeniería Industrial se especializa en la planificación, diseño y mejora de sistemas productivos. Este profesional lidera la administración de recursos humanos, tecnológicos y financieros para optimizar procesos organizacionales y contribuir al desarrollo económico.</p>
+            </div>
+
+            <!-- Misión y Visión -->
+            <div>
+                <h1 class="mb-4">Misión y Visión</h1>
+                <ul>
+                    <li>
+                        <strong>Misión:</strong> Formar ingenieros industriales con una sólida preparación técnica, ética e innovadora, capaces de afrontar los desafíos del mundo moderno y generar soluciones sostenibles.
+                    </li>
+                    <li>
+                        <strong>Visión:</strong> Ser una escuela líder en la formación de ingenieros industriales reconocidos por su excelencia académica y su impacto en la mejora de la calidad de vida.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Objetivos Educacionales -->
+            <div>
+                <h1 class="mb-4">Objetivos Educacionales</h1>
+                <ul>
+                    <li><strong>Formar profesionales</strong> con una sólida base en la planificación y mejora de procesos industriales, capaces de enfrentar los desafíos globales del sector.</li>
+                    <li><strong>Desarrollar habilidades técnicas</strong> en la gestión de recursos y optimización de sistemas productivos.</li>
+                    <li><strong>Promover la sostenibilidad</strong> integrando principios de sostenibilidad en los procesos industriales.</li>
+                    <li><strong>Fomentar la innovación</strong> en el diseño y mejora continua de sistemas industriales.</li>
+                </ul>
+            </div>
+
+            <!-- Competencias del Egresado -->
+            <div>
+                <h1 class="mb-4">Competencias del Egresado</h1>
+                <ul>
+                    <li><strong>Capacidad de análisis</strong> en la resolución de problemas industriales mediante métodos científicos y técnicos. El egresado será capaz de abordar situaciones complejas utilizando herramientas de análisis cuantitativo y cualitativo, lo que le permitirá optimizar procesos y soluciones dentro del ámbito industrial.</li>
+                    <li><strong>Competencia en la gestión de recursos</strong> y en la planificación de procesos industriales para mejorar la productividad. El egresado será capaz de gestionar eficazmente los recursos humanos, materiales y financieros, garantizando la implementación de procesos eficientes y rentables que maximicen el rendimiento de las empresas.</li>
+                    <li><strong>Capacidad para implementar soluciones innovadoras</strong> que aumenten la eficiencia en los sistemas industriales. Utilizando nuevas tecnologías y enfoques creativos, el egresado podrá diseñar e implementar soluciones innovadoras que mejoren los procesos productivos, reduciendo costos y tiempos de operación.</li>
+                    <li><strong>Compromiso con la sostenibilidad</strong> y el desarrollo de procesos que respeten el medio ambiente. El egresado tendrá un enfoque ético y responsable en la toma de decisiones, implementando prácticas sostenibles que minimicen el impacto ambiental de las actividades industriales.</li>
+                    <li><strong>Habilidades de liderazgo</strong> para coordinar equipos multidisciplinarios y dirigir proyectos industriales. El egresado desarrollará una sólida capacidad para liderar equipos, asegurando la correcta ejecución de proyectos y la implementación de mejoras dentro de las organizaciones.</li>
+                    <li><strong>Capacidad para aplicar técnicas avanzadas de automatización y control</strong> en procesos industriales. Con un conocimiento profundo de los sistemas automáticos, el egresado podrá implementar y gestionar tecnologías que optimicen la producción, mejoren la calidad y garanticen la seguridad industrial.</li>
+                    <li><strong>Habilidad para gestionar proyectos complejos</strong> en entornos industriales, considerando aspectos técnicos, financieros y operativos. El egresado podrá coordinar proyectos de gran envergadura, asegurando el cumplimiento de los plazos, la calidad y los costos establecidos.</li>
+                    <li><strong>Capacidad para identificar oportunidades de mejora continua</strong> en procesos industriales. A través del uso de metodologías como Lean Manufacturing o Six Sigma, el egresado podrá identificar y aplicar mejoras continuas en la eficiencia y productividad de las empresas industriales.</li>
+                    <li><strong>Competencia en la gestión de la calidad</strong> y el aseguramiento de estándares en los procesos industriales. El egresado podrá implementar sistemas de gestión de calidad que garanticen la satisfacción del cliente y el cumplimiento de normativas internacionales.</li>
+                    <li><strong>Compromiso con la ética profesional</strong> y la responsabilidad social en el ejercicio de la ingeniería industrial. El egresado actuará con integridad, tomando decisiones que no solo optimicen los resultados económicos, sino que también favorezcan el bienestar de la comunidad y el entorno.</li>
+                </ul>
+            </div>
+
+            <!-- Información del Director -->
+            <div>
+                <h1 class="mb-4">Director de Escuela</h1>
+                <div class="d-flex align-items-center contenido-director">
+                    <ul>
+                        <li>
+                            <strong>Director:</strong> Dr. Batallanos Casas, Williams Hernan
+                        </li>
+                        <li>
+                            <strong>Anexo:</strong> 8743
+                        </li>
+                        <li>
+                            <strong>Email:</strong> epii.fiis@unfv.edu.pe
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="{% static 'img/director_industrial.jpg' %}" alt="Director de Industrial" class="card-img-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Navegación lateral */
+    .rutas {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #D9D9D9;
+        padding: 20px 0px;
+        align-items: center;
+        height: auto;
+    }
+
+    .rutas a {
+        text-decoration: none;
+        color: #FFFFFF;
+        padding: 17px;
+        background-color: #c94141;
+        border-radius: 90px;
+        text-align: center;
+        width: 100%;
+        max-width: 270px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .rutas a:hover {
+        background-color: #902020;
+        color: #fff;
+    }
+
+    /* Contenido principal */
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 50px;
+        gap: 20px;
+    }
+
+    .contenido-director {
+        display: flex;
+        gap: 100px;
+    }
+
+    /* Estilos de títulos */
+    h1 {
+        font-size: 24px;
+        color: #902020;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Estilo de imagen del director */
+    .card-img-top {
+        width: 100px;
+        height: auto;
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+</style>
+{% endblock %}
