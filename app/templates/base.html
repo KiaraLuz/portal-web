@@ -95,9 +95,9 @@
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{% url 'sistemas' %}">Escuela Profesional de Ingeniería de Sistemas</a></li>
-              <li><a class="dropdown-item" href="#">Escuela Profesional de Ingeniería de Transportes</a></li>
-              <li><a class="dropdown-item" href="#">Escuela Profesional de Ingeniería Agroindustrial</a></li>
-              <li><a class="dropdown-item" href="#">Escuela Profesional de Ingeniería Industrial</a></li>
+              <li><a class="dropdown-item" href="{% url 'transportes' %}">Escuela Profesional de Ingeniería de Transportes</a></li>
+              <li><a class="dropdown-item" href="{% url 'agroindustrial' %}">Escuela Profesional de Ingeniería Agroindustrial</a></li>
+              <li><a class="dropdown-item" href="{% url 'industrial' %}">Escuela Profesional de Ingeniería Industrial</a></li>
             </ul>
           </div>
 
@@ -120,8 +120,8 @@
               <li><a class="dropdown-item" href="{% url 'trabajo' %}">Bolsa de Trabajo</a></li>
               <li><a class="dropdown-item" href="{% url 'tramite' %}">Trámites</a></li>
               <li><a class="dropdown-item" href="{% url 'gestion_academica' %}">Gestión Académica</a></li>
-              <li><a class="dropdown-item" href="#">Gestión Administrativa</a></li>
-              <li><a class="dropdown-item" href="#">Segundas Especialidades</a></li>
+              <li><a class="dropdown-item" href="{% url 'gestion_administrativa' %}">Gestión Administrativa</a></li>
+              <li><a class="dropdown-item" href="{% url 'segunda_especialidad' %}">Segundas Especialidades</a></li>
               <li><a class="dropdown-item" href="#">TUPA</a></li>
             </ul>
           </div>
@@ -151,9 +151,9 @@
               Convenios
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Nacionales</a></li>
-              <li><a class="dropdown-item" href="#">Internacionales</a></li>
-              <li><a class="dropdown-item" href="#">Redes interinstitucionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'nacionales' %}">Nacionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'internacionales' %}">Internacionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'interinstitucionales' %}">Redes interinstitucionales</a></li>
             </ul>
           </div>
         </ul>

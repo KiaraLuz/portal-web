@@ -21,6 +21,15 @@ def autoridades(request):
 def sistemas(request):
     return render(request, 'escuela/sistemas.html')
 
+def transportes(request):
+    return render(request, 'escuela/transportes.html')
+
+def agroindustrial(request):
+    return render(request, 'escuela/agroindustrial.html')
+
+def industrial(request):
+    return render(request, 'escuela/industrial.html')
+
 def gestion_academica(request):
     return render(request, 'estudiantes/gestion_academica.html')
 
@@ -53,3 +62,22 @@ def trabajo(request):
 
 def tramite(request):
     return render(request, 'estudiantes/tramite.html')
+
+def gestion_academica(request):
+    return render(request, 'estudiantes/gestion_academica.html')    
+
+def gestion_administrativa(request):
+    return render(request, 'estudiantes/gestion_administrativa.html')
+
+def segunda_especialidad(request):
+    return render(request, 'estudiantes/segunda_especialidad.html')
+
+def nacionales(request):
+    return render(request, 'convenios/nacionales.html')
+
+def internacionales(request):
+    return render(request, 'convenios/internacionales.html')
+
+def interinstitucionales(request):
+    return render(request, 'convenios/interinstitucionales.html')
+
