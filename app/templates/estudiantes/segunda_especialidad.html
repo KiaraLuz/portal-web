@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Segundas Especialidades</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Segundas Especialidades UNFV</h1>
+            <p>
+                La especialidad tiene como objetivo preparar profesionales de alto nivel académico con la capacidad de analizar, desarrollar, implementar y administrar tecnologías de la información. Además, busca estimular la realización de proyectos de investigación y desarrollo que fomenten la creación de soluciones más efectivas.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contenido con tabla e imagen -->
+    <div class="row mt-4 align-items-center">
+        <!-- Tabla -->
+        <div class="col-md-7">
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <td><strong>Dirigido a:</strong></td>
+                        <td>Profesionales (se requiere copia del título universitario inscrito en SUNEDU)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Duración:</strong></td>
+                        <td>Aproximadamente de 11 a 12 meses</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Horario:</strong></td>
+                        <td>
+                            Sábado: 3:00 pm - 8:00 pm<br>
+                            Domingo: 8:00 am - 1:00 pm
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inversión:</strong></td>
+                        <td>
+                            Admisión: 200 S/<br>
+                            Matrícula: 250 S/<br>
+                            Pensión: 500 S/ (Pensión por curso)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Imagen -->
+        <div class="col-md-5 text-center">
+            <img class="img-fluid" src="https://www.upsjb.edu.pe/wp-content/uploads/2024/03/importancia_ing.-Sistemas.png" alt="Segundas Especialidades">
+        </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-4 text-center">
+            <a href="#" class="btn btn-orange w-100 mb-2">Trámites administrativos</a>
+            <a href="#" class="btn btn-orange w-100">Registrarse</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    /* Tabla */
+    .table {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .table td {
+        padding: 10px 15px;
+    }
+
+    .table td:first-child {
+        font-weight: bold;
+        width: 30%;
+    }
+
+    /* Imagen */
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Botones */
+    .btn-orange {
+        background-color: #f79c42;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-orange:hover {
+        background-color: #dc7c28;
+        color: #fff;
+    }
+</style>
+{% endblock %}

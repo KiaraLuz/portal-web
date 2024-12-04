@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Redes interinstitucionales</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Redes interinstitucionales</h1>
+            <p class="lead text-muted">
+                Los convenios de nuestra universidad son acuerdos estratégicos con instituciones académicas, empresas y organizaciones a nivel nacional e internacional, ofrecen a los estudiantes oportunidades de intercambio académico, prácticas profesionales e investigación conjunta. Estos acuerdos permiten ampliar sus horizontes, mejorar su formación y facilitar el acceso a nuevas experiencias y desafíos profesionales, fortaleciendo así su preparación en un contexto global.
+            </p>
+        </div>
+    </div>
+
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Ajusta según lo que prefieras */
+            object-fit: cover; /* Asegura que la imagen se recorte proporcionalmente para encajar */
+        }
+    </style>
+
+    <!-- Carrusel -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div id="eventosCarrusel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Contenedor de los elementos del carrusel -->
+                <div class="carousel-inner">
+                    <!-- Grupo 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">COMPOSTELA</h5>
+                                        <img src="https://www.unfv.edu.pe/media/k2/items/cache/3119c7be2ab58173062c39c6b8c72ed7_XL.jpg" class="card-img-top mb-3" alt="Evento">
+                                        <a href="#" class="btn btn-primary">Más info</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Asociación universitaria Iberoamericana de postgrado</h5>
+                                        <img src="https://www.unfv.edu.pe/media/k2/items/cache/3119c7be2ab58173062c39c6b8c72ed7_XL.jpg" class="card-img-top mb-3" alt="Evento">
+                                        <a href="#" class="btn btn-primary">Más info</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">UNIVERSIA</h5>
+                                        <img src="https://www.unfv.edu.pe/media/k2/items/cache/3119c7be2ab58173062c39c6b8c72ed7_XL.jpg" class="card-img-top mb-3" alt="Evento">
+                                        <a href="#" class="btn btn-primary">Más info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Grupo 2 -->
+                    
+                </div>
+
+                <!-- Controles del carrusel -->
+                <a class="carousel-control-prev" href="#eventosCarrusel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#eventosCarrusel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+
+
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    p.lead {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+    }
+
+    /* Tarjetas */
+    .transparency-card {
+        background-color: #ffffff;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .transparency-card:hover {
+        transform: scale(1.05);
+    }
+
+    .transparency-card h5 {
+        font-size: 1.2rem;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .circle-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #dc7c28;
+        background-color: #ffffff;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .btn-orange {
+        background-color: #f79c42;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-orange:hover {
+        background-color: #dc7c28;
+        color: #fff;
+    }
+</style>
+{% endblock %}

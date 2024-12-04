@@ -62,3 +62,28 @@ def trabajo(request):
 
 def tramite(request):
     return render(request, 'estudiantes/tramite.html')
+
+def gestion_academica(request):
+    return render(request, 'estudiantes/gestion_academica.html')    
+
+def gestion_administrativa(request):
+    return render(request, 'estudiantes/gestion_administrativa.html')
+
+def segunda_especialidad(request):
+    return render(request, 'estudiantes/segunda_especialidad.html')
+
+def tupa(request):
+    return render(request, 'estudiantes/tupa.html')
+
+def oficinas(request):
+    return render(request, 'oficinas/oficinas.html')
+
+def nacionales(request):
+    return render(request, 'convenios/nacionales.html')
+
+def internacionales(request):
+    return render(request, 'convenios/internacionales.html')
+
+def interinstitucionales(request):
+    return render(request, 'convenios/interinstitucionales.html')
+

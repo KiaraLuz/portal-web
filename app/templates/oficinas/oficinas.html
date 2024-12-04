@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Oficinas</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Oficinas</h1>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 20px; width: 300px; height: 400px;">
+                <div style="background-color: #902020; height: 200px; width: 200px; border-radius: 100%;">
+                </div>
+                <p class="text-center">Laboratorio de Cómputo</p>
+                <a href="#" class="btn btn-orange w-100 mb-2">Más...</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 20px; width: 300px; height: 400px;">
+                <div style="background-color: #902020; height: 200px; width: 200px; border-radius: 100%;">
+                </div>
+                <p class="text-center">Biblioteca Especializada</p>
+                <a href="#" class="btn btn-orange w-100 mb-2">Más...</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 20px; width: 300px; height: 400px;">
+                <div style="background-color: #902020; height: 200px; width: 200px; border-radius: 100%;">
+                </div>
+                <p class="text-center">Unidad de Posgrado</p>
+                <a href="#" class="btn btn-orange w-100 mb-2">Más...</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 20px; width: 300px; height: 400px;">
+                <div style="background-color: #902020; height: 200px; width: 200px; border-radius: 100%;">
+                </div>
+                <p class="text-center">Secretaría Académica</p>
+                <a href="#" class="btn btn-orange w-100 mb-2">Más...</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between;  padding: 20px; width: 300px; height: 400px;">
+                <div style="background-color: #902020; height: 200px; width: 200px; border-radius: 100%;">
+                </div>
+                <p class="text-center">Unidad de Investigación, Innovación y Emprendimiento</p>
+                <a href="#" class="btn btn-orange w-100 mb-2">Más...</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between;  padding: 20px; width: 300px; height: 400px;">
+                <div style="background-color: #902020; height: 200px; width: 200px; border-radius: 100%;">
+                </div>
+                <p class="text-center">Oficina de Prácticas Pre Profesionales</p>
+                <a href="#" class="btn btn-orange w-100 mb-2">Más...</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 20px; width: 300px; height: 400px;">
+                <div style="background-color: #902020; height: 200px; width: 200px; border-radius: 100%;">
+                </div>
+                <p class="text-center">Oficina de Tutoría y Psicopedagogía</p>
+                <a href="#" class="btn btn-orange w-100 mb-2">Más...</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 20px; width: 300px; height: 400px;">
+                <div style="background-color: #902020; height: 200px; width: 200px; border-radius: 100%;">
+                </div>
+                <p class="text-center">Oficina de Grados y Gestión del Egresado</p>
+                <a href="#" class="btn btn-orange w-100 mb-2">Más...</a>
+            </div>
+        </div>
+    </div>
+</div>  
+{% endblock content %}
+
+{% block extra_css %}
+<style>
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    .btn-orange {
+        background-color: #f79c42;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-orange:hover {
+        background-color: #dc7c28;
+        color: #fff;
+    }
+</style>
+{% endblock %}

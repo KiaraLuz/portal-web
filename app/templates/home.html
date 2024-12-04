@@ -52,42 +52,54 @@
       <div class="card" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Directorio Telefónico</h5>
+          <a href="{% url 'autoridades' %}" class="card-title a-servicios">
+            Directorio Telefónico
+          </a>
         </div>
       </div>
 
       <div class="card" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Plana Docente</h5>
+          <a href="{% url 'transparencias' %}" class="card-title a-servicios">
+            Plana Docente
+          </a>
         </div>
       </div>
 
       <div class="card" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Consultas Bibliográficas</h5>
+          <a href="{% url 'biblioteca' %}" class="card-title a-servicios">
+            Consultas Bibliográficas
+          </a>
         </div>
       </div>
 
       <div class="card" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Trámites</h5>
+          <a href="{% url 'tramite' %}" class="card-title a-servicios">
+            Trámites
+          </a>
         </div>
       </div>
 
       <div class="card" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Bolsa de Trabajo</h5>
+          <a href="{% url 'trabajo' %}" class="card-title a-servicios">
+            Bolsa de Trabajo
+          </a>
         </div>
       </div>
 
       <div class="card" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Horarios</h5>
+          <a href="{% url 'calendario' %}" class="card-title a-servicios">
+            Calendario Académico
+          </a>
         </div>
       </div>
     </div>
@@ -95,7 +107,12 @@
 </main>
 
 <style>
-  .h5 {
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
+
+  h5 {
     font-size: 40px;
   }
 
