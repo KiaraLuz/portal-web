@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Gestión Académica</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="mb-4">Trámite virtual UNFV</h1>     
+        </div>
+    </div>
+
+    <!-- Instrucciones -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <p class="font-weight-bold">Registro de Solicitud de Trámite</p>
+            <p><a href="#" class="btn btn-link">Descargar: Formulario Único de Trámite</a></p>
+            <p><strong>IMPORTANTE:</strong> El FUT debe ir incluido en su documento adjunto digital (PDF)</p>
+            <p><a href="#" class="btn btn-link">Descargar: ANEXO III (Solo para trámites de solicitud de pensiones DL 20530)</a></p>
+        </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="row mt-4">
+        <div class="col-md-10 offset-md-1">
+            <form class="p-4 bg-light rounded shadow-sm">
+                <!-- Primera fila -->
+                <div class="form-row mb-3">
+                    <div class="form-group col-md-6">
+                        <label for="tramite">Trámite a Realizar (Obligatorio):</label>
+                        <select class="form-control" id="tramite" required>
+                            <option value="">Seleccionar trámite</option>
+                            <option value="1">Trámite 1</option>
+                            <option value="2">Trámite 2</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group col-md-6">
+                        <label for="dependencia">Dependencia a quien se dirige (Obligatorio):</label>
+                        <select class="form-control" id="dependencia" required>
+                            <option value="">Seleccionar dependencia</option>
+                            <option value="1">Dependencia 1</option>
+                            <option value="2">Dependencia 2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Segunda fila -->
+                <div class="form-row mb-3">
+                    <div class="form-group col-md-6">
+                        <label for="tipo-solicitante">Tipo Solicitante (Obligatorio):</label>
+                        <select class="form-control" id="tipo-solicitante" required>
+                            <option value="">Seleccionar tipo solicitante</option>
+                            <option value="1">Estudiante</option>
+                            <option value="2">Docente</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group col-md-6">
+                        <label for="tipo-documento">Tipo de Documento (Obligatorio):</label>
+                        <select class="form-control" id="tipo-documento" required>
+                            <option value="">Seleccionar tipo documento</option>
+                            <option value="1">DNI</option>
+                            <option value="2">Carnet de Extranjería</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tercera fila -->
+                <div class="form-row mb-3">
+                    <div class="form-group col-md-4">
+                        <label for="numero-documento">Número de Documento (Obligatorio):</label>
+                        <input type="text" class="form-control" id="numero-documento" required>
+                    </div>
+                    <br>
+                    <div class="form-group col-md-4">
+                        <label for="apellido-paterno">Apellido Paterno (Obligatorio):</label>
+                        <input type="text" class="form-control" id="apellido-paterno" required>
+                    </div>
+                    <br>
+                    <div class="form-group col-md-4">
+                        <label for="apellido-materno">Apellido Materno (Obligatorio):</label>
+                        <input type="text" class="form-control" id="apellido-materno" required>
+                    </div>
+                </div>
+
+                <!-- Cuarta fila -->
+                <div class="form-row mb-3">
+                    <div class="form-group col-md-6">
+                        <label for="direccion">Dirección (Obligatorio):</label>
+                        <input type="text" class="form-control" id="direccion" required>
+                    </div>
+                    <br>
+                    <div class="form-group col-md-6">
+                        <label for="correo">Correo Electrónico (Obligatorio):</label>
+                        <input type="email" class="form-control" id="correo" required>
+                       
+                    </div>
+                </div>
+
+                <!-- Archivos Adjuntos -->
+                <div class="form-group mb-3">
+                    <label for="documento-adjunto">Documentos Adjuntos Digital (Obligatorio):</label>
+                    <input type="file" class="form-control-file" id="documento-adjunto" accept=".pdf" required>
+                    <small class="form-text text-muted">
+                        El tamaño máximo del archivo PDF es de 4MB.
+                    </small>
+                </div>
+
+                <!-- Folios -->
+                <div class="form-group mb-4">
+                    <label for="folios">Folios (Obligatorio):</label>
+                    <input type="number" class="form-control" id="folios" required>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Enviar Solicitud</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+    .form-control, .form-control-file {
+        border-radius: 5px;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+</style>
+{% endblock %}

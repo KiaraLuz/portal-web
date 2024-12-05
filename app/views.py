@@ -10,22 +10,28 @@ def mision_vision(request):
     return render(request, 'facultad/mision_vision.html')
 
 def transparencias(request):
-    documentos = [
-        {"titulo": "Estatuto de la Universidad", "enlace": "/ruta/estatuto.pdf"},
-        {"titulo": "Reglamento General", "enlace": "/ruta/reglamento.pdf"},
-        {"titulo": "Decretos Supremos", "enlace": "/ruta/decretos.pdf"},
-        {"titulo": "Plan Estratégico Institucional", "enlace": "/ruta/plan.pdf"},
-        {"titulo": "Información del Presupuesto Institucional", "enlace": "/ruta/presupuesto.pdf"},
-        {"titulo": "Información Académica", "enlace": "/ruta/academica.pdf"},
-        {"titulo": "Información Docente", "enlace": "/ruta/docente.pdf"},
-    ]
-    return render(request, 'facultad/transparencias.html', {'documentos': documentos})
+    return render(request, 'facultad/transparencias.html')
 
-def resoluciones_actas_reglamentos(request):
-    return render(request, 'facultad/resoluciones_actas_reglamentos.html')
+def reglamentos(request):
+    return render(request, 'facultad/reglamentos.html')
 
 def autoridades(request):
     return render(request, 'facultad/autoridades.html')
+
+def sistemas(request):
+    return render(request, 'escuela/sistemas.html')
+
+def transportes(request):
+    return render(request, 'escuela/transportes.html')
+
+def agroindustrial(request):
+    return render(request, 'escuela/agroindustrial.html')
+
+def industrial(request):
+    return render(request, 'escuela/industrial.html')
+
+def gestion_academica(request):
+    return render(request, 'estudiantes/gestion_academica.html')
 
 def programacion(request):
     return render(request, 'capacitacion/programacion.html')
@@ -41,3 +47,43 @@ def bigdata(request):
 
 def eventos(request):
     return render(request, 'eventos/eventos.html')
+
+def biblioteca(request):
+    return render(request, 'investigacion/biblioteca.html')
+
+def correo(request):
+    return render(request, 'estudiantes/correo.html')
+
+def calendario(request):
+    return render(request, 'estudiantes/calendario.html')
+
+def trabajo(request):
+    return render(request, 'estudiantes/trabajo.html')
+
+def tramite(request):
+    return render(request, 'estudiantes/tramite.html')
+
+def gestion_academica(request):
+    return render(request, 'estudiantes/gestion_academica.html')    
+
+def gestion_administrativa(request):
+    return render(request, 'estudiantes/gestion_administrativa.html')
+
+def segunda_especialidad(request):
+    return render(request, 'estudiantes/segunda_especialidad.html')
+
+def tupa(request):
+    return render(request, 'estudiantes/tupa.html')
+
+def oficinas(request):
+    return render(request, 'oficinas/oficinas.html')
+
+def nacionales(request):
+    return render(request, 'convenios/nacionales.html')
+
+def internacionales(request):
+    return render(request, 'convenios/internacionales.html')
+
+def interinstitucionales(request):
+    return render(request, 'convenios/interinstitucionales.html')
+

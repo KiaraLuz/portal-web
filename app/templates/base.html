@@ -9,7 +9,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   
-  
   {% block extra_css %}
   <!-- Aquí se pueden agregar estilos específicos para la plantilla que extienda de base.html -->
   {% endblock %}
@@ -85,7 +84,7 @@
               <li><a class="dropdown-item" href="{% url 'resena_historica' %}">Reseña Histórica</a></li>
               <li><a class="dropdown-item" href="{% url 'mision_vision' %}">Misión y Visión</a></li>
               <li><a class="dropdown-item" href="{% url 'transparencias' %}">Transparencias</a></li>
-              <li><a class="dropdown-item" href="{% url 'resoluciones_actas_reglamentos' %}">Resoluciones, actas y reglamentos</a></li>
+              <li><a class="dropdown-item" href="{% url 'reglamentos' %}">Reglamentos</a></li>
               <li><a class="dropdown-item" href="{% url 'autoridades' %}">Autoridades</a></li>
             </ul>
           </div>
@@ -95,10 +94,10 @@
               Escuela
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Escuela Profesional de Ingeniería de Sistemas</a></li>
-              <li><a class="dropdown-item" href="#">Escuela Profesional de Ingeniería de Transportes</a></li>
-              <li><a class="dropdown-item" href="#">Escuela Profesional de Ingeniería Agroindustrial</a></li>
-              <li><a class="dropdown-item" href="#">Escuela Profesional de Ingeniería Industrial</a></li>
+              <li><a class="dropdown-item" href="{% url 'sistemas' %}">Escuela Profesional de Ingeniería de Sistemas</a></li>
+              <li><a class="dropdown-item" href="{% url 'transportes' %}">Escuela Profesional de Ingeniería de Transportes</a></li>
+              <li><a class="dropdown-item" href="{% url 'agroindustrial' %}">Escuela Profesional de Ingeniería Agroindustrial</a></li>
+              <li><a class="dropdown-item" href="{% url 'industrial' %}">Escuela Profesional de Ingeniería Industrial</a></li>
             </ul>
           </div>
 
@@ -107,7 +106,7 @@
               Investigación
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Biblioteca Virtual</a></li>
+              <li><a class="dropdown-item" href="{% url 'biblioteca' %}">Biblioteca Virtual</a></li>
             </ul>
           </div>
 
@@ -116,19 +115,19 @@
               Estudiantes
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Correo Institucional</a></li>
-              <li><a class="dropdown-item" href="#">Calendario Académico</a></li>
-              <li><a class="dropdown-item" href="#">Bolsa de Trabajo</a></li>
-              <li><a class="dropdown-item" href="#">Trámites</a></li>
-              <li><a class="dropdown-item" href="#">Gestión Académica</a></li>
-              <li><a class="dropdown-item" href="#">Gestión Administrativa</a></li>
-              <li><a class="dropdown-item" href="#">Segundas Especialidades</a></li>
-              <li><a class="dropdown-item" href="#">TUPA</a></li>
+              <li><a class="dropdown-item" href="{% url 'correo' %}">Correo Institucional</a></li>
+              <li><a class="dropdown-item" href="{% url 'calendario' %}">Calendario Académico</a></li>
+              <li><a class="dropdown-item" href="{% url 'trabajo' %}">Bolsa de Trabajo</a></li>
+              <li><a class="dropdown-item" href="{% url 'tramite' %}">Trámites</a></li>
+              <li><a class="dropdown-item" href="{% url 'gestion_academica' %}">Gestión Académica</a></li>
+              <li><a class="dropdown-item" href="{% url 'gestion_administrativa' %}">Gestión Administrativa</a></li>
+              <li><a class="dropdown-item" href="{% url 'segunda_especialidad' %}">Segundas Especialidades</a></li>
+              <li><a class="dropdown-item" href="{% url 'tupa' %}">TUPA</a></li>
             </ul>
           </div>
 
           <li class="nav-item">
-            <a class="nav-link">Oficinas</a>
+            <a class="nav-link" href="{% url 'oficinas' %}">Oficinas</a>
           </li>
 
           <div class="dropdown">
@@ -152,9 +151,9 @@
               Convenios
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Nacionales</a></li>
-              <li><a class="dropdown-item" href="#">Internacionales</a></li>
-              <li><a class="dropdown-item" href="#">Redes interinstitucionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'nacionales' %}">Nacionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'internacionales' %}">Internacionales</a></li>
+              <li><a class="dropdown-item" href="{% url 'interinstitucionales' %}">Redes interinstitucionales</a></li>
             </ul>
           </div>
         </ul>

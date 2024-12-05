@@ -16,16 +16,16 @@
     </div>
 
     <div class="row align-items-center">
-        <!-- Texto de Misión y Visión -->
+        <!-- Titulos -->
         <div class="col-md-8">
-            <h2 class="mb-4">Misión</h2>
+            <h1 class="mb-4">Misión</h1>
             <p class="lead">
                 "Brindar formación profesional científica y humanística a los estudiantes, con sensibilidad social,
                 innovación, competitividad y emprendimiento, para contribuir al desarrollo y la sostenibilidad sistémica
                 del país."
-            </p>
+            </p><br>
 
-            <h2 class="mt-5 mb-4">Visión</h2>
+            <h1 class="mt-5 mb-4">Visión</h1>
             <p class="lead">
                 "Comunidad académica posicionada entre las mejores universidades en el ámbito nacional e internacional a
                 través de la calidad, producción y difusión intelectual e innovación con responsabilidad social."
@@ -34,11 +34,12 @@
 
         <!-- Imagen -->
         <div class="col-md-4 text-center">
-            <div class="image-placeholder bg-light border mb-3" style="height: 300px; width: 100%;"></div>
+            <img src="{% static 'img/PEI_2018_2020.jpg' %}" class="image bg-light" alt="PLAN ESTRATÉGICO INSTITUCIONAL 2018-2020 UNFV">
             <p class="text-muted small">
                 Aprobado con Resolución R. N° 2535-2018-CU-UNFV
             </p>
-            <a href="#" class="btn btn-orange">Descargar Resolución</a>
+            <!-- Botón de descarga -->
+            <a href="{% static 'pdf/PEI_2018_2020.pdf' %}" class="btn btn-orange" download="PEI_2018_2020.pdf">Descargar Resolución</a>
         </div>
     </div>
 </div>
@@ -61,7 +62,7 @@
     }
 
     /* Sección principal */
-    h2 {
+    h1 {
         color: #902020;
         font-weight: bold;
     }
@@ -72,11 +73,15 @@
         color: #333;
     }
 
-    /* Placeholder de imagen */
-    .image-placeholder {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    /* Imagen */
+    .image {
+        height: 60%;
+        width: 100%;
+        border: 1px solid #333;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        background-color: lightgrey;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     /* Estilo del botón */

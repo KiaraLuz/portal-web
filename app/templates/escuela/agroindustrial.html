@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <!-- Breadcrumb de navegación -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela</li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela Profesional de Ingeniería de Agroindustrial</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2 rutas">
+            <!-- Enlaces de navegación lateral con anclas -->
+            <a href="#presentacion">Presentación</a>
+            <a href="#objetivos">Objetivos Educacionales</a>
+            <a href="#competencias">Competencias del Egresado</a>
+            <a href="{% static 'pdf/PLAN_CURRICULAR_2019_EPIA.pdf' %}" download>Plan de Estudios</a>
+            <a href="{% static 'pdf/malla_agroindustrial.pdf' %}" download>Malla Curricular</a>
+        </div>
+
+        <div class="col-md-10 align-items-center contenido">
+            <!-- Información sobre la carrera -->
+            <div>
+                <h1 class="mb-4">Sobre la carrera</h1>
+                <p>La Ingeniería Agroindustrial capacita al estudiante para transformar productos agrícolas en bienes de
+                    alto valor agregado, optimizando procesos productivos y promoviendo el desarrollo sostenible del
+                    sector. Este profesional combina la ingeniería con las ciencias agrícolas para impulsar la
+                    competitividad en mercados nacionales e internacionales.</p>
+            </div>
+
+            <!-- Misión y Visión -->
+            <div>
+                <h1 class="mb-4">Misión y Visión</h1>
+                <ul>
+                    <li>
+                        <strong>Misión:</strong> Formar ingenieros agroindustriales comprometidos con la innovación y la
+                        sostenibilidad, capaces de liderar la transformación de la agroindustria y contribuir al
+                        bienestar social y económico.
+                    </li>
+                    <li>
+                        <strong>Visión:</strong> Ser reconocidos como una escuela de excelencia en la formación de
+                        profesionales agroindustriales, destacada por su aporte al desarrollo sostenible y la
+                        competitividad global.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Objetivos Educacionales -->
+            <div>
+                <h1 class="mb-4">Objetivos Educacionales</h1>
+                <ul>
+                    <li><strong>Formar profesionales</strong> con los conocimientos científicos y técnicos necesarios para el desarrollo de la agroindustria.</li>
+                    <li><strong>Capacitar en la gestión y optimización de procesos agroindustriales</strong>, aplicando técnicas de ingeniería y sostenibilidad.</li>
+                    <li><strong>Desarrollar habilidades en la investigación y aplicación de innovaciones tecnológicas</strong> para mejorar la competitividad del sector agroindustrial.</li>
+                    <li><strong>Fomentar el compromiso social y ético</strong> en los egresados para contribuir al bienestar de las comunidades rurales y urbanas.</li>
+                    <li><strong>Promover la formación de líderes</strong> capaces de tomar decisiones estratégicas que favorezcan la competitividad internacional de la agroindustria.</li>
+                </ul>
+            </div>
+
+            <!-- Competencias del Egresado -->
+            <div>
+                <h1 class="mb-4">Competencias del Egresado</h1>
+                <ul>
+                    <li><strong>Diseñar, implementar y optimizar procesos agroindustriales</strong> que contribuyan a la producción eficiente de bienes agroalimentarios.</li>
+                    <li><strong>Gestionar recursos naturales y energéticos</strong> para mejorar la productividad agroindustrial.</li>
+                    <li><strong>Desarrollar proyectos de innovación tecnológica</strong> en el ámbito agroindustrial utilizando prácticas sostenibles.</li>
+                    <li><strong>Gestionar la calidad</strong> en procesos agroindustriales mediante la implementación de estándares y normativas.</li>
+                    <li><strong>Aplicar prácticas de producción sostenible</strong> que respeten el medio ambiente y promuevan la eficiencia energética.</li>
+                    <li><strong>Liderar equipos multidisciplinarios</strong> en la gestión de proyectos agroindustriales complejos a nivel nacional e internacional.</li>
+                    <li><strong>Gestionar aspectos económicos y financieros</strong> para la toma de decisiones estratégicas en el ámbito agroindustrial.</li>
+                    <li><strong>Desarrollar soluciones tecnológicas innovadoras</strong> que optimicen la producción, conservación y comercialización de productos agroindustriales.</li>
+                </ul>
+            </div>
+
+            <!-- Información del Director -->
+            <div>
+                <h1 class="mb-4">Director de Escuela</h1>
+                <div class="d-flex align-items-center contenido-director">
+                    <ul>
+                        <li>
+                            <strong>Director:</strong> Dra. Angeles Lazo, Ana Maria
+                        </li>
+                        <li>
+                            <strong>Anexo:</strong> 8728
+                        </li>
+                        <li>
+                            <strong>Email:</strong> epia.fiis@unfv.edu.pe
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="{% static 'img/director_agroindustrial.jpg' %}" alt="Director de Agroindustrial"
+                            class="card-img-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Navegación lateral */
+    .rutas {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #D9D9D9;
+        padding: 20px 0px;
+        align-items: center;
+        height: auto;
+    }
+
+    .rutas a {
+        text-decoration: none;
+        color: #FFFFFF;
+        padding: 17px;
+        background-color: #c94141;
+        border-radius: 90px;
+        text-align: center;
+        width: 100%;
+        max-width: 270px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .rutas a:hover {
+        background-color: #902020;
+        color: #fff;
+    }
+
+    /* Contenido principal */
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 50px;
+        gap: 20px;
+    }
+
+    .contenido-director {
+        display: flex;
+        gap: 100px;
+    }
+
+    /* Estilos de títulos */
+    h1 {
+        font-size: 27px;
+        color: #902020;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Estilo de imagen del director */
+    .card-img-top {
+        width: 100px;
+        height: auto;
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <!-- Breadcrumb de navegación -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela</li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela Profesional de Ingeniería de Sistemas
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2 rutas">
+            <!-- Enlaces de navegación lateral con anclas -->
+            <a href="#presentacion">Presentación</a>
+            <a href="#objetivos">Objetivos Educacionales</a>
+            <a href="#competencias">Competencias del Egresado</a>
+            <a href="{% static 'pdf/PLAN_CURRICULAR_2019_EPIS.pdf' %}" download>Plan de Estudios</a>
+            <a href="{% static 'pdf/malla_sistemas.pdf' %}" download>Malla Curricular</a>
+        </div>
+
+        <div class="col-md-10 align-items-center contenido">
+            <!-- Información sobre la carrera -->
+            <div>
+                <h1 class="mb-4">Sobre la carrera</h1>
+                <p>El estudiante de Ingeniería de Sistemas se especializa en el diseño, desarrollo y gestión de
+                    soluciones tecnológicas para optimizar los procesos organizacionales. Este profesional aplica
+                    tecnologías avanzadas como inteligencia artificial, ciberseguridad y gestión de datos para resolver
+                    problemas complejos en diversas industrias.</p>
+            </div>
+
+            <!-- Misión y Visión -->
+            <div>
+                <h1 class="mb-4">Misión y Visión</h1>
+                <ul>
+                    <li>
+                        <strong>Misión:</strong> Formar ingenieros de sistemas competentes, innovadores y éticos,
+                        capaces de liderar la transformación digital y contribuir al desarrollo sostenible de la
+                        sociedad.
+                    </li>
+                    <li>
+                        <strong>Visión:</strong> Ser una escuela líder en la formación de profesionales en sistemas,
+                        reconocida por su excelencia académica y su impacto positivo en el ámbito tecnológico global.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Objetivos Educacionales -->
+            <div>
+                <h1 class="mb-4">Objetivos Educacionales</h1>
+                <ul>
+                    <li><strong>Formar profesionales capacitados</strong> en el diseño, análisis, desarrollo y gestión
+                        de soluciones tecnológicas, con un enfoque en la innovación y eficiencia.</li>
+                    <li><strong>Desarrollar habilidades técnicas</strong> en áreas como la programación, bases de datos,
+                        redes, inteligencia artificial y ciberseguridad.</li>
+                    <li><strong>Promover el trabajo en equipo</strong> y el liderazgo en proyectos multidisciplinarios,
+                        asegurando la aplicación de soluciones tecnológicas en entornos reales.</li>
+                    <li><strong>Fomentar la innovación</strong> mediante la aplicación de tecnologías emergentes y el
+                        desarrollo de nuevos productos y servicios en el ámbito de la ingeniería de sistemas.</li>
+                    <li><strong>Desarrollar la capacidad de adaptación</strong> a los constantes avances tecnológicos y
+                        su integración en soluciones prácticas para las empresas y la sociedad.</li>
+                </ul>
+            </div>
+
+            <!-- Competencias del Egresado -->
+            <div>
+                <h1 class="mb-4">Competencias del Egresado</h1>
+                <ul>
+                    <li><strong>Capacidad de análisis y resolución de problemas</strong> complejos en el ámbito de los
+                        sistemas, aplicando enfoques científicos y técnicos adecuados.</li>
+                    <li><strong>Competencia en el diseño y desarrollo</strong> de software, sistemas de información,
+                        bases de datos y redes de comunicaciones, entre otros.</li>
+                    <li><strong>Capacidad para gestionar proyectos</strong> tecnológicos, asegurando el cumplimiento de
+                        los objetivos y la eficiencia operativa en todas las fases del ciclo de vida del proyecto.</li>
+                    <li><strong>Habilidades de liderazgo y trabajo en equipo</strong> para la gestión de proyectos
+                        multidisciplinarios, fomentando la innovación y creatividad en el desarrollo de soluciones.</li>
+                    <li><strong>Capacidad de aplicar ciberseguridad</strong> para proteger sistemas de información,
+                        redes y datos en entornos digitales de alta complejidad.</li>
+                    <li><strong>Compromiso con la sostenibilidad</strong> al integrar soluciones tecnológicas que
+                        favorezcan el desarrollo económico y social con el respeto al medio ambiente.</li>
+                    <li><strong>Capacidad para tomar decisiones éticas</strong> en el ámbito profesional, considerando
+                        el impacto social, económico y ambiental de sus acciones.</li>
+                </ul>
+            </div>
+
+            <!-- Información del Director -->
+            <div>
+                <h1 class="mb-4">Director de Escuela</h1>
+                <div class="d-flex align-items-center contenido-director">
+                    <ul>
+                        <li>
+                            <strong>Director:</strong> Dr. Flores Vidales, Higinio
+                        </li>
+                        <li>
+                            <strong>Anexo:</strong> 8819
+                        </li>
+                        <li>
+                            <strong>Email:</strong> epis.fiis@unfv.edu.pe
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="{% static 'img/director_sistemas.jpg' %}" alt="Director de Sistemas"
+                            class="card-img-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Navegación lateral */
+    .rutas {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #D9D9D9;
+        padding: 20px 0px;
+        align-items: center;
+        height: auto;
+    }
+
+    .rutas a {
+        text-decoration: none;
+        color: #FFFFFF;
+        padding: 17px;
+        background-color: #c94141;
+        border-radius: 90px;
+        text-align: center;
+        width: 100%;
+        max-width: 270px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .rutas a:hover {
+        background-color: #902020;
+        color: #fff;
+    }
+
+    /* Contenido principal */
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 50px;
+        gap: 20px;
+    }
+
+    .contenido-director {
+        display: flex;
+        gap: 100px;
+    }
+
+    /* Estilos de títulos */
+    h1 {
+        font-size: 27px;
+        color: #902020;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Estilo de imagen del director */
+    .card-img-top {
+        width: 100px;
+        height: auto;
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+</style>
+{% endblock %}

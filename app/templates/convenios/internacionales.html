@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Convenios internacionales</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Convenios internacionales</h1>
+            <p class="lead text-muted">
+                Los convenios de nuestra universidad son acuerdos estratégicos con instituciones académicas, empresas y organizaciones a nivel nacional e internacional. Ofrecen a los estudiantes oportunidades de intercambio académico, prácticas profesionales e investigación conjunta. Estos acuerdos permiten ampliar sus horizontes, mejorar su formación y facilitar el acceso a nuevas experiencias y desafíos profesionales, fortaleciendo así su preparación en un contexto global.
+            </p>
+        </div>
+    </div>
+
+    <!-- Tabla de convenios internacionales -->
+    <div class="row mt-5">
+        <div class="col-12">
+            
+            <table class="table table-bordered text-center">
+                <thead style="background-color: #f79c42; color: white;">
+                    <tr>
+                        <th>Título</th>
+                        <th>Fecha de Suscripción</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Comuna 1</td>
+                        <td>2024-01-15</td>
+                        <td><a href="#" class="btn btn-orange">Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td>Comuna 2</td>
+                        <td>2024-02-20</td>
+                        <td><a href="#" class="btn btn-orange">Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td>Comuna 3</td>
+                        <td>2024-03-10</td>
+                        <td><a href="#" class="btn btn-orange">Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td>Comuna 4</td>
+                        <td>2024-04-05</td>
+                        <td><a href="#" class="btn btn-orange">Detalle</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    p.lead {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+    }
+
+    /* Tarjetas */
+    .transparency-card {
+        background-color: #ffffff;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .transparency-card:hover {
+        transform: scale(1.05);
+    }
+
+    .transparency-card h5 {
+        font-size: 1.2rem;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .circle-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #dc7c28;
+        background-color: #ffffff;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    /* Botón */
+    .btn-orange {
+        background-color: #f79c42;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-orange:hover {
+        background-color: #dc7c28;
+        color: #fff;
+    }
+
+    /* Tabla */
+    .table {
+        font-size: 1rem;
+        border-collapse: collapse;
+    }
+
+    .table-bordered th, .table-bordered td {
+        border: 1px solid #ddd;
+    }
+
+    .table th {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+</style>
+{% endblock %}

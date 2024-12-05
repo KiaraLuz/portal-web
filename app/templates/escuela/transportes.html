@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <!-- Breadcrumb de navegación -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela</li>
+                    <li class="breadcrumb-item active" aria-current="page">Escuela Profesional de Ingeniería de Transportes</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2 rutas">
+            <!-- Enlaces de navegación lateral con anclas -->
+            <a href="#presentacion">Presentación</a>
+            <a href="#objetivos">Objetivos Educacionales</a>
+            <a href="#competencias">Competencias del Egresado</a>
+            <a href="{% static 'pdf/PLAN_CURRICULAR_2019_EPIT.pdf' %}" download>Plan de Estudios</a>
+            <a href="{% static 'pdf/malla_transportes.pdf' %}" download>Malla Curricular</a>
+        </div>
+
+        <div class="col-md-10 align-items-center contenido">
+            <!-- Información sobre la carrera -->
+            <div>
+                <h1 class="mb-4">Sobre la carrera</h1>
+                <p>En esta especialidad, el estudiante se dedica al diseño y gestión de sistemas de transporte
+                    eficientes, seguros y sostenibles. Su formación abarca la planificación de infraestructuras viales,
+                    ferroviarias, marítimas y aéreas, promoviendo soluciones que favorezcan la conectividad y reduzcan
+                    el impacto ambiental.</p>
+            </div>
+
+            <!-- Misión y Visión -->
+            <div>
+                <h1 class="mb-4">Misión y Visión</h1>
+                <ul>
+                    <li>
+                        <strong>Misión:</strong> Formar ingenieros de sistemas competentes, innovadores y éticos,
+                        capaces de liderar la transformación digital y contribuir al desarrollo sostenible de la
+                        sociedad.
+                    </li>
+                    <li>
+                        <strong>Visión:</strong> Ser una escuela líder en la formación de profesionales en sistemas,
+                        reconocida por su excelencia académica y su impacto positivo en el ámbito tecnológico global.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Objetivos Educacionales -->
+            <div>
+                <h1 class="mb-4">Objetivos Educacionales</h1>
+                <ul>
+                    <li><strong>Formar profesionales capacitados</strong> en el diseño, análisis, planificación y
+                        gestión de sistemas de transporte, capaces de enfrentar los desafíos globales del sector.</li>
+                    <li><strong>Desarrollar habilidades técnicas y operativas</strong> en áreas como la ingeniería vial,
+                        ferroviaria, marítima y aérea, así como en la optimización de la infraestructura de transporte.
+                    </li>
+                    <li><strong>Promover la sostenibilidad</strong> mediante la integración de soluciones que minimicen
+                        el impacto ambiental de las infraestructuras y sistemas de transporte.</li>
+                    <li><strong>Fomentar la innovación tecnológica</strong> y la adaptación a nuevas tecnologías en el
+                        ámbito del transporte, con el objetivo de mejorar la eficiencia y seguridad en las redes de
+                        transporte.</li>
+                    <li><strong>Desarrollar competencias de liderazgo y trabajo en equipo</strong> para la gestión de
+                        proyectos de transporte en entornos multidisciplinarios.</li>
+                </ul>
+            </div>
+
+            <!-- Competencias del Egresado -->
+            <div>
+                <h1 class="mb-4">Competencias del Egresado</h1>
+                <ul>
+                    <li><strong>Capacidad de análisis y resolución de problemas</strong> relacionados con la ingeniería
+                        de transporte, aplicando principios científicos y técnicos para encontrar soluciones eficientes
+                        y sostenibles.</li>
+                    <li><strong>Competencia en el diseño y planificación</strong> de infraestructuras de transporte,
+                        incluyendo la evaluación de la demanda, seguridad vial, accesibilidad y sostenibilidad.</li>
+                    <li><strong>Capacidad para gestionar proyectos de transporte</strong> en diversas modalidades (vial,
+                        ferroviaria, marítima, aérea), asegurando el cumplimiento de plazos, costos y calidad en la
+                        ejecución de los mismos.</li>
+                    <li><strong>Habilidades de liderazgo y trabajo en equipo</strong> para dirigir y coordinar equipos
+                        de trabajo en proyectos multidisciplinarios y de gran envergadura.</li>
+                    <li><strong>Capacidad para implementar tecnologías innovadoras</strong> en sistemas de transporte,
+                        con un enfoque en la mejora continua y la eficiencia operativa.</li>
+                    <li><strong>Compromiso con la sostenibilidad</strong> mediante la integración de soluciones
+                        tecnológicas y prácticas que reduzcan el impacto ambiental del transporte.</li>
+                    <li><strong>Capacidad para tomar decisiones éticas</strong> y responsables en el ámbito profesional,
+                        considerando el impacto social, económico y ambiental de sus decisiones.</li>
+                </ul>
+            </div>
+
+            <!-- Información del Director -->
+            <div>
+                <h1 class="mb-4">Director de Escuela</h1>
+                <div class="d-flex align-items-center contenido-director">
+                    <ul>
+                        <li>
+                            <strong>Director:</strong> Dr. Flores Vidales, Higinio
+                        </li>
+                        <li>
+                            <strong>Anexo:</strong> 8731
+                        </li>
+                        <li>
+                            <strong>Email:</strong> epit.fiis@unfv.edu.pe
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="{% static 'img/director_sistemas.jpg' %}" alt="Director de Transportes" class="card-img-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Navegación lateral */
+    .rutas {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #D9D9D9;
+        padding: 20px 0px;
+        align-items: center;
+        height: auto;
+    }
+
+    .rutas a {
+        text-decoration: none;
+        color: #FFFFFF;
+        padding: 17px;
+        background-color: #c94141;
+        border-radius: 90px;
+        text-align: center;
+        width: 100%;
+        max-width: 270px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .rutas a:hover {
+        background-color: #902020;
+        color: #fff;
+    }
+
+    /* Contenido principal */
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 50px;
+        gap: 20px;
+    }
+
+    .contenido-director {
+        display: flex;
+        gap: 100px;
+    }
+
+    /* Estilos de títulos */
+    h1 {
+        font-size: 27px;
+        color: #902020;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Estilo de imagen del director */
+    .card-img-top {
+        width: 100px;
+        height: auto;
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+</style>
+{% endblock %}

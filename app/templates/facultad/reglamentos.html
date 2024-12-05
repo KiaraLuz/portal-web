@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <!-- Breadcrumb -->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Facultad</li>
+                    <li class="breadcrumb-item active" aria-current="page">Reglamentos</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Título principal -->
+    <div class="text-center mb-4">
+        <h1>Reglamentos</h1>
+    </div>
+
+    <!-- Sección de tarjetas -->
+    <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento General de la Universidad Nacional Federico Villarreal</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_universitaria/documentos_gestion_reglamentos/reglamentos_universidad/reglamento_general/documento_reglamento_general.pdf"
+                    class="btn btn-orange" target="_blank">Ver Documento</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento del Estudiante</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_estandar/Datos_Generales/Normas_Emitidas/Resoluciones/Consejo_Universitario/2018/Resolucion_R_Nro_3235_2018_CU_UNFV.pdf"
+                    class="btn btn-orange" target="_blank">Ver Documento</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento de Organización y Funciones</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_estandar/Datos_Generales/Normas_Emitidas/Resoluciones/Consejo_Universitario/2020/Resolucion_R_Nro_7098_2020_CU_UNFV.pdf"
+                    class="btn btn-orange" target="_blank">Ver Documento</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento General de Grados y Títulos</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_universitaria/documentos_gestion_reglamentos/reglamentos_universidad/reglamento_grados_titulos/documento_reglamento_general_grados_titulos.pdf"
+                    class="btn btn-orange" target="_blank">Ver
+                    Documento</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento de Procesos de Admisión</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_universitaria/documentos_gestion_reglamentos/reglamentos_universidad/reglamento_admision/reglamento_admision.pdf"
+                    class="btn btn-orange" target="_blank">Ver Documento</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento Disciplinario del Estudiante</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_universitaria/documentos_gestion_reglamentos/reglamentos_universidad/reglamento_disciplinario_estudiante/reglamento_disciplinario_estudiante_docente.pdf"
+                    class="btn btn-orange" target="_blank">Ver Documento</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 7 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento de Investigación</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_estandar/Datos_Generales/Normas_Emitidas/Resoluciones/Consejo_Universitario/2018/Resolucion_R_Nro_4195_2018_CU_UNFV.pdf"
+                    class="btn btn-orange" target="_blank">Ver
+                    Documento</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 8 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento de Contratación de Docentes</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_estandar/Datos_Generales/Normas_Emitidas/Resoluciones/Rectorales/2020/Resolucion_R_Nro_6910_2020_UNFV.pdf"
+                    class="btn btn-orange" target="_blank">Ver Documento</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 9 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="reglamento-card text-center">
+                <h4>Reglamento para la Formulación, Suscripción y Evaluación de Convenios</h4><br>
+                <a href="https://www.unfv.edu.pe/transparencia_estandar/Datos_Generales/Normas_Emitidas/Resoluciones/Consejo_Universitario/2018/Resolucion_R_Nro_3067_2018_CU_UNFV.pdf"
+                    class="btn btn-orange" target="_blank">Ver Documento</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Breadcrumb */
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    /* Título principal */
+    h1 {
+        font-size: 2.5rem;
+        color: #902020;
+        font-weight: bold;
+    }
+
+    /* Tarjetas */
+    .reglamento-card {
+        background-color: #f9f9f9;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .reglamento-card:hover {
+        transform: scale(1.05);
+    }
+
+    .reglamento-card h4 {
+        font-size: 1.2rem;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .btn-orange {
+        background-color: #f79c42;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .btn-orange:hover {
+        background-color: #dc7c28;
+    }
+
+    .btn-disabled {
+        background-color: #ddd;
+        color: #aaa;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 1rem;
+    }
+</style>
+{% endblock %}
