@@ -9,7 +9,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+                    <li class="breadcrumb-item active" aria-current="page">Convenios</li>
                     <li class="breadcrumb-item active" aria-current="page">Redes interinstitucionales</li>
                 </ol>
             </nav>
@@ -26,74 +26,41 @@
         </div>
     </div>
 
-    <style>
-        .card-img-top {
-            width: 100%;
-            height: 200px; /* Ajusta según lo que prefieras */
-            object-fit: cover; /* Asegura que la imagen se recorte proporcionalmente para encajar */
-        }
-    </style>
-
-    <!-- Carrusel -->
+    <!-- Paneles -->
     <div class="row mt-4">
-        <div class="col-12">
-            <div id="eventosCarrusel" class="carousel slide" data-bs-ride="carousel">
-                <!-- Contenedor de los elementos del carrusel -->
-                <div class="carousel-inner">
-                    <!-- Grupo 1 -->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-4 text-center">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">COMPOSTELA</h5>
-                                        <img src="https://www.unfv.edu.pe/media/k2/items/cache/3119c7be2ab58173062c39c6b8c72ed7_XL.jpg" class="card-img-top mb-3" alt="Evento">
-                                        <a href="#" class="btn btn-primary">Más info</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Asociación universitaria Iberoamericana de postgrado</h5>
-                                        <img src="https://www.unfv.edu.pe/media/k2/items/cache/3119c7be2ab58173062c39c6b8c72ed7_XL.jpg" class="card-img-top mb-3" alt="Evento">
-                                        <a href="#" class="btn btn-primary">Más info</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">UNIVERSIA</h5>
-                                        <img src="https://www.unfv.edu.pe/media/k2/items/cache/3119c7be2ab58173062c39c6b8c72ed7_XL.jpg" class="card-img-top mb-3" alt="Evento">
-                                        <a href="#" class="btn btn-primary">Más info</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Grupo 2 -->
-                    
+        <!-- Panel 1 -->
+        <div class="col-md-4 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title font-weight-bold">COMPOSTELA</h6>
+                    <img src="{% static 'img/compostela.jpg' %}" class="card-img-top mb-3" alt="Compostela">
+                    <a href="#" class="btn btn-primary">Más info</a>
                 </div>
+            </div>
+        </div>
 
-                <!-- Controles del carrusel -->
-                <a class="carousel-control-prev" href="#eventosCarrusel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#eventosCarrusel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </a>
+        <!-- Panel 2 -->
+        <div class="col-md-4 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title font-weight-bold">Asociación universitaria Iberoamericana de postgrado</h6>
+                    <img src="{% static 'img/auip.jpg' %}" class="card-img-top mb-3" alt="Asociación universitaria Iberoamericana de postgrado">
+                    <a href="#" class="btn btn-primary">Más info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="col-md-4 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title font-weight-bold">UNIVERSIA</h6>
+                    <img src="{% static 'img/universia.jpg' %}" class="card-img-top mb-3" alt="Universia">
+                    <a href="#" class="btn btn-primary">Más info</a>
+                </div>
             </div>
         </div>
     </div>
-    
-    
-    
-    
-
-
 </div>
 {% endblock %}
 
@@ -129,49 +96,28 @@
     }
 
     /* Tarjetas */
-    .transparency-card {
-        background-color: #ffffff;
-        border: 2px solid #ddd;
-        border-radius: 10px;
-        padding: 20px;
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s ease-in-out;
+        margin-bottom: 20px;
     }
 
-    .transparency-card:hover {
-        transform: scale(1.05);
+    .card-img-top {
+        width: 100%;
+        height: 250px;  /* Establece una altura fija para todas las imágenes */
+        object-fit: contain;  /* Esto asegura que las imágenes se recorten proporcionalmente */
+        border-radius: 5px;
     }
 
-    .transparency-card h5 {
-        font-size: 1.2rem;
-        color: #333;
-        font-weight: bold;
-    }
-
-    .circle-icon {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 3px solid #dc7c28;
-        background-color: #ffffff;
-        margin: 0 auto;
-        object-fit: contain;
-    }
-
-    .btn-orange {
-        background-color: #f79c42;
-        color: #fff;
+    .btn-primary {
+        background-color: #902020;
         border: none;
-        padding: 10px 20px;
-        border-radius: 20px;
-        font-size: 1rem;
-        text-transform: uppercase;
-        transition: background-color 0.3s ease;
     }
 
-    .btn-orange:hover {
-        background-color: #dc7c28;
-        color: #fff;
+    .btn-primary:hover {
+        background-color: #700000;
     }
 </style>
 {% endblock %}
+
