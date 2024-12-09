@@ -114,6 +114,14 @@
         border: 1px solid #ddd;
         border-radius: 5px;
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    }
+
+    /* Efecto dinámico en hover */
+    .image:hover {
+        transform: scale(1.05); /* Incremento del tamaño */
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+        filter: brightness(1.1) saturate(1.2); /* Incremento de brillo y saturación */
     }
 </style>
 {% endblock %}
