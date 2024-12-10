@@ -3,6 +3,7 @@
 {% block content %}
 {% load static %}
 <main>
+
   <img href="/" class="home" src="{% static 'img/home.png' %}" alt="Home"/>
 
   <div class="container h-full">
@@ -12,7 +13,7 @@
   <div style="padding: 20px;">
     <h1 class="encabezado">Noticias</h1>
     <div class="cards container" style="justify-content: space-between;">
-      <div class="card" style="width: 18rem;">
+      <div class="card animacion" style="width: 18rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">11/11/2024</p>
@@ -20,7 +21,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 18rem;">
+      <div class="card animacion" style="width: 18rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">11/11/2024</p>
@@ -28,7 +29,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 18rem;">
+      <div class="card animacion" style="width: 18rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">11/11/2024</p>
@@ -36,7 +37,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 18rem;">
+      <div class="card animacion" style="width: 18rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">11/11/2024</p>
@@ -49,7 +50,7 @@
   <div style="padding-bottom: 20px;">
     <h1 class="encabezado">Servicios</h1>
     <div class="cards container" style="justify-content: space-between;">
-      <div class="card" style="width: 12rem;">
+      <div class="card animacion" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <a href="{% url 'autoridades' %}" class="card-title a-servicios">
@@ -58,7 +59,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card animacion" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <a href="{% url 'transparencias' %}" class="card-title a-servicios">
@@ -67,7 +68,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card animacion" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <a href="{% url 'biblioteca' %}" class="card-title a-servicios">
@@ -76,7 +77,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card animacion" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <a href="{% url 'tramite' %}" class="card-title a-servicios">
@@ -85,7 +86,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card animacion" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <a href="{% url 'trabajo' %}" class="card-title a-servicios">
@@ -94,7 +95,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card animacion" style="width: 12rem;">
         <img src="{% static 'img/noticia.webp' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <a href="{% url 'calendario' %}" class="card-title a-servicios">
@@ -153,6 +154,17 @@
     z-index: 1;
     color: #fff
   }
+
+  .animacion {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  }
+
+  .animacion:hover {
+      transform: scale(1.05); 
+      box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3); 
+      filter: brightness(1.1) saturate(1.2);
+  }
+
   .home {
     width: 100%;
     height: calc(100vh);

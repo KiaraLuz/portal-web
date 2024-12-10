@@ -18,14 +18,14 @@
     <div class="row align-items-center">
         <!-- Titulos -->
         <div class="col-md-8">
-            <h2 class="mb-4">Misión</h2>
+            <h1 class="mb-4">Misión</h1>
             <p class="lead">
                 "Brindar formación profesional científica y humanística a los estudiantes, con sensibilidad social,
                 innovación, competitividad y emprendimiento, para contribuir al desarrollo y la sostenibilidad sistémica
                 del país."
             </p><br>
 
-            <h2 class="mt-5 mb-4">Visión</h2>
+            <h1 class="mt-5 mb-4">Visión</h1>
             <p class="lead">
                 "Comunidad académica posicionada entre las mejores universidades en el ámbito nacional e internacional a
                 través de la calidad, producción y difusión intelectual e innovación con responsabilidad social."
@@ -44,6 +44,7 @@
     </div>
 </div>
 {% endblock %}
+
 {% block extra_css %}
 <style>
     /* Breadcrumb */
@@ -55,51 +56,103 @@
     .breadcrumb a {
         color: #000000;
         text-decoration: none;
+        transition: color 0.3s ease;
     }
 
     .breadcrumb a:hover {
+        color: #902020;
         text-decoration: underline;
     }
 
-    /* Sección principal */
-    h2 {
+    /* Títulos */
+    h1 {
         color: #902020;
         font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
     }
 
+    h1::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 50px;
+        height: 3px;
+        background-color: #902020;
+        transition: width 0.3s ease;
+    }
+
+    h1:hover::after {
+        width: 100%;
+    }
+
+    /* Texto */
     .lead {
         font-size: 1.25rem;
         text-align: justify;
         color: #333;
+        line-height: 1.6;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .lead:hover {
+        transform: scale(1.02);
+        color: #555;
     }
 
     /* Imagen */
     .image {
-        height: 60%;
+        height: auto;
         width: 100%;
-        border: 1px solid #333;
-        border-radius: 5px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
         margin-bottom: 1rem;
         background-color: lightgrey;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     }
 
-    /* Estilo del botón */
+    .image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+        filter: brightness(1.1) saturate(1.2);
+    }
+
+    /* Botón */
     .btn-orange {
         background-color: #f79c42;
         color: #fff;
         border: none;
         padding: 10px 20px;
-        border-radius: 20px;
+        border-radius: 30px;
         font-size: 1rem;
         text-transform: uppercase;
-        transition: background-color 0.3s ease;
+        transition: transform 0.3s ease, background-color 0.3s ease;
         text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .btn-orange:hover {
         background-color: #dc7c28;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         color: #fff;
+    }
+
+    .btn-orange:active {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Texto del pie de la imagen */
+    .text-muted {
+        font-size: 0.85rem;
+        transition: color 0.3s ease;
+    }
+
+    .text-muted:hover {
+        color: #555;
     }
 </style>
 {% endblock %}

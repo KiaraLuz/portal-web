@@ -22,13 +22,13 @@
             <a href="#presentacion">Presentación</a>
             <a href="#objetivos">Objetivos Educacionales</a>
             <a href="#competencias">Competencias del Egresado</a>
-            <a href="#plan-estudios">Plan de Estudios</a>
-            <a href="#malla">Malla Curricular</a>
+            <a href="{% static 'pdf/PLAN_CURRICULAR_2019_EPIT.pdf' %}" download>Plan de Estudios</a>
+            <a href="{% static 'pdf/malla_transportes.pdf' %}" download>Malla Curricular</a>
         </div>
 
         <div class="col-md-10 align-items-center contenido">
             <!-- Información sobre la carrera -->
-            <div>
+            <div id="presentacion">
                 <h1 class="mb-4">Sobre la carrera</h1>
                 <p>En esta especialidad, el estudiante se dedica al diseño y gestión de sistemas de transporte
                     eficientes, seguros y sostenibles. Su formación abarca la planificación de infraestructuras viales,
@@ -53,7 +53,7 @@
             </div>
 
             <!-- Objetivos Educacionales -->
-            <div>
+            <div id="objetivos">
                 <h1 class="mb-4">Objetivos Educacionales</h1>
                 <ul>
                     <li><strong>Formar profesionales capacitados</strong> en el diseño, análisis, planificación y
@@ -72,7 +72,7 @@
             </div>
 
             <!-- Competencias del Egresado -->
-            <div>
+            <div id="competencias">
                 <h1 class="mb-4">Competencias del Egresado</h1>
                 <ul>
                     <li><strong>Capacidad de análisis y resolución de problemas</strong> relacionados con la ingeniería
@@ -182,7 +182,7 @@
 
     /* Estilos de títulos */
     h1 {
-        font-size: 24px;
+        font-size: 27px;
         color: #902020;
         font-weight: bold;
         text-align: center;
@@ -200,6 +200,10 @@
         border: 2px solid #ddd;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 50%;
+    }
+
+    #presentacion, #objetivos, #competencias {
+        scroll-margin-top: 100px; 
     }
 </style>
 {% endblock %}
