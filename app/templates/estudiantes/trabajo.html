@@ -125,6 +125,54 @@
 
 {% block extra_css %}
 <style>
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transparency-card {
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Animación al pasar el ratón (hover) */
+.transparency-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjetas con animación de desplazamiento */
+.transparency-card:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+.transparency-card:nth-child(odd) {
+    animation-delay: 0.4s;
+}
+
+/* Ajuste de las imágenes dentro de las tarjetas */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(0.9);
+}
     /* Breadcrumb */
     .contenedor-t{
         width: 100%;

@@ -90,6 +90,51 @@
 
 {% block extra_css %}
 <style>
+        /* Animación de aparición */
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Animación hover */
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0;
+        animation: fadeIn 0.8s ease-in-out forwards;
+    }
+
+    .card:hover {
+        transform: scale(0.5);
+        box-shadow: 5px 8px 12px rgba(199, 17, 17, 0.61);
+    }
+
+    /* Imagen dentro de la tarjeta */
+    .card-img-top {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px 5px 0 0;
+    }
+
+    /* Botón */
+    .btn-primary {
+        background-color: #902020;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #700000;
+    }
     /* Breadcrumb */
     .breadcrumb {
         background-color: transparent;
