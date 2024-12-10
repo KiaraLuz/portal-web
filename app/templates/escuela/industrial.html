@@ -28,7 +28,7 @@
 
         <div class="col-md-10 align-items-center contenido">
             <!-- Información sobre la carrera -->
-            <div>
+            <div id="presentacion">
                 <h1 class="mb-4">Sobre la carrera</h1>
                 <p>El estudiante de Ingeniería Industrial se especializa en la planificación, diseño y mejora de sistemas productivos. Este profesional lidera la administración de recursos humanos, tecnológicos y financieros para optimizar procesos organizacionales y contribuir al desarrollo económico.</p>
             </div>
@@ -47,7 +47,7 @@
             </div>
 
             <!-- Objetivos Educacionales -->
-            <div>
+            <div id="objetivos">
                 <h1 class="mb-4">Objetivos Educacionales</h1>
                 <ul>
                     <li><strong>Formar profesionales</strong> con una sólida base en la planificación y mejora de procesos industriales, capaces de enfrentar los desafíos globales del sector.</li>
@@ -58,7 +58,7 @@
             </div>
 
             <!-- Competencias del Egresado -->
-            <div>
+            <div id="competencias">
                 <h1 class="mb-4">Competencias del Egresado</h1>
                 <ul>
                     <li><strong>Capacidad de análisis</strong> en la resolución de problemas industriales mediante métodos científicos y técnicos. El egresado será capaz de abordar situaciones complejas utilizando herramientas de análisis cuantitativo y cualitativo, lo que le permitirá optimizar procesos y soluciones dentro del ámbito industrial.</li>
@@ -180,6 +180,10 @@
         border: 2px solid #ddd;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 50%;
+    }
+
+    #presentacion, #objetivos, #competencias {
+        scroll-margin-top: 100px; 
     }
 </style>
 {% endblock %}
